@@ -32,7 +32,7 @@
 		
      
 	     
-**4 - [Executor-Framework](https://github.com/abhiLinkd/Java-Threads-Step-By-Step/tree/master/1-d-CreatingThreads-Executors)**
+**4 - [Executor-Framework](https://github.com/abhiSyncd/Java-Threads-Step-By-Step/tree/master/1-d-CreatingThreads-Executors)**
 
       i) Need of Executor|Thread Pool
       
