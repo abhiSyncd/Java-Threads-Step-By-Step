@@ -65,7 +65,7 @@
 
  **1 - Thread Priority** : Thread Scheduling 
     
- **2 - Stopping Threads**
+ **2 - [Stopping Threads](https://github.com/abhiSyncd/Java-Threads-Step-By-Step/tree/master/2-b-StoppingThreads)**
 
 ###################################################################################
 ## Section 3 - Multi Threading :  Problem & Solution 
