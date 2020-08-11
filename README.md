@@ -87,7 +87,7 @@
        - ReadWriteLock
        - StampedLock (Java 8)
 
-**2 - [DeadLocks](https://github.com/abhiLinkd/Java-Threads-Step-By-Step/tree/master/5-b-Deadlock-Problem%26Solution)**
+**2 - [DeadLocks](https://github.com/abhiSyncd/Java-Threads-Step-By-Step/tree/master/5-b-Deadlock)**
 
     i)What is DeadLock
     
