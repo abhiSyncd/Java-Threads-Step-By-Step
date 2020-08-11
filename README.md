@@ -19,7 +19,7 @@
       - Using Runnable-Interface as Anonymous Inner Class 
       - Using Lambda 
 	   
-**3 - [Callable Interface](https://github.com/abhiLinkd/Java-Threads-Step-By-Step/tree/master/1-c-CreatingThreads-Callable-with-Future)**
+**3 - [Callable Interface](https://github.com/abhiSyncd/Java-Threads-Step-By-Step/tree/master/1-c-CreatingThreads-Callable-with-Future)**
 
        i) Difference Thread vs Runnable 
 	   
