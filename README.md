@@ -152,12 +152,12 @@
 
    - [CountingSemaphore](https://github.com/abhiSyncd/Java-Threads-Step-By-Step/tree/master/4-a-CountingSemaphore)
    - [CountdownLatch](https://github.com/abhiLinkd/Java-Threads-Step-By-Step/tree/master/4-b-Synchornizers-CountdownLatch)
-   - [CyclicBarrier](https://github.com/abhiLinkd/Java-Threads-Step-By-Step/tree/master/4-c-Synchornizers-CyclicBarrier)
+   - [CyclicBarrier](https://github.com/abhiSyncd/Java-Threads-Step-By-Step/tree/master/4-c-CyclicBarrier)
    - Exchanger
    - Phaser
 
 ###################################################################################
-## Section 5 - [Immutable Class](https://github.com/abhiLinkd/Java-Threads-Step-By-Step/tree/master/6-a-ImmutableClasses-ThreadSafe)
+## Section 5 - [Immutable Class](https://github.com/abhiSyncd/Java-Threads-Step-By-Step/tree/master/6-a-ImmutableClasses-ThreadSafe)
 ###################################################################################
 
       1 - What is an Immutable Class
