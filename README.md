@@ -93,7 +93,7 @@
     
     ii)Solution 
     
-**3 - Starvation** 
+**3 - [Starvation](https://github.com/abhiSyncd/Java-Threads-Step-By-Step/tree/master/5-c-Starvation)** 
 
 **4 - Livelock** 
 
