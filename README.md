@@ -71,7 +71,7 @@
 ## Section 3 - Multi Threading :  Problem & Solution 
 ###################################################################################
 
-**1 - [Race Condition](https://github.com/abhiLinkd/Java-Threads-Step-By-Step/tree/master/5-a-RaceCondition-Problem%26Solution)**
+**1 - [Race Condition](https://github.com/abhiSyncd/Java-Threads-Step-By-Step/tree/master/5-a-RaceCondition-I)**
 
     i)What is Race Condition 
     
@@ -82,7 +82,7 @@
        
     iii)Synchronize vs ReetrantLock
   
-    iv)Types of Extrinsic Lock in Java
+    iv)Types of Extrinsic Lock in Java : L ock
        - ReentrantLock
        - ReadWriteLock
        - StampedLock (Java 8)
