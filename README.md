@@ -7,13 +7,13 @@
 ###################################################################################
 
 
-**1 - [Thread Class](https://github.com/abhiLinkd/Java-Threads-Step-By-Step/tree/master/1-a-CreatingThreads-Thread)**
+**1 - [Thread Class](https://github.com/abhiSyncd/Java-Threads-Step-By-Step/tree/master/1-a-CreatingThreads-Thread)**
 
       - Using Thread-Class as separate Class 
       - Using Thread Class as Anonymous Inner Class 
       - Using Lambda 
     
-**2 - [Runnable Interface](https://github.com/abhiLinkd/Java-Threads-Step-By-Step/tree/master/1-b-CreatingThreads-Runnable)**
+**2 - [Runnable Interface](https://github.com/abhiSyncd/Java-Threads-Step-By-Step/tree/master/1-b-CreatingThreads-Runnable)**
 
       - Using Runnable-Interface as separate Class  
       - Using Runnable-Interface as Anonymous Inner Class 
