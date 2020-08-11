@@ -95,7 +95,7 @@
     
 **3 - [Starvation](https://github.com/abhiSyncd/Java-Threads-Step-By-Step/tree/master/5-c-Starvation)** 
 
-**4 - Livelock** 
+**4 - [Livelock](https://github.com/abhiSyncd/Java-Threads-Step-By-Step/tree/master/5-d-Livelocks)** 
 
 **5 - Memory consistency errors | Visibility Problem** 
     
