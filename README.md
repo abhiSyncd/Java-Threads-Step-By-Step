@@ -141,7 +141,7 @@
  
 **2 - Producer Consumer : Inter Thread Communication**
 
-   - [Using Wait & Notify](https://github.com/abhiLinkd/Java-Threads-Step-By-Step/tree/master/3-c-Synchronization-ProducerConsumer-usingWaitNotify)
+   - [Using Wait & Notify](https://github.com/abhiSyncd/Java-Threads-Step-By-Step/tree/master/3-c-ProducerConsumer-usingWaitNotify)
    - [Using Blocking Queue](https://github.com/abhiLinkd/Java-Threads-Step-By-Step/tree/master/3-d-Synchronization-ProducerConsumer-usingBlockingQueue)
    - [Using Extrinsic Lock and Condition Class](https://www.youtube.com/watch?v=N0mMm5PF5Ow)
   
