@@ -1,4 +1,10 @@
 
+
+STOPPING THREADS
+https://praveer09.github.io/technology/2015/12/06/understanding-thread-interruption-in-java/
+https://codepumpkin.com/interrupt-interrupted-isinterrupted-java-multithreading/
+
+
 ## 1 - Problem  : Java Threads cannot be killed
  
         Runnable runnable = () -> {
