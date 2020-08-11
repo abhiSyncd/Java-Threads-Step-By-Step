@@ -282,7 +282,7 @@
 
 **2 - Rate Limiting**
 
-**3 - Custom Thread Pool**
+**3 - [Custom Thread Poo](https://github.com/abhiSyncd/Java-Threads-Step-By-Step/tree/master/7-a-CustomThreadPool)**
     
     - https://way2java.com/multithreading/realtime-examples-of-multithreading/
     - Gathering information from different web services running in parallel : CompletableFuture, which uses Fork-Join Pool by Default
