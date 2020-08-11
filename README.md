@@ -136,7 +136,7 @@
 
 **1 - Synchronize**
 
-   - [Object Level Lock](https://github.com/abhiLinkd/Java-Threads-Step-By-Step/tree/master/3-a-Synchronization-ObjectLevelLock)
+   - [Object Level Lock](https://github.com/abhiSyncd/Java-Threads-Step-By-Step/tree/master/3-a-ObjectLevelLock)
    - [Class Level Lock](https://github.com/abhiLinkd/Java-Threads-Step-By-Step/tree/master/3-b-Synchronization-ClassLevelLock)
  
 **2 - Producer Consumer : Inter Thread Communication**
