@@ -49,7 +49,7 @@
   ## 4)WAITING a thread 
     
 	
-   **4-I-Using Thread class static sleep() method : Thread.sleep()
+   **4-I-Using Thread class static sleep() method : Thread.sleep()**
 	
 		try {
 			Thread.sleep(2000);
@@ -64,7 +64,7 @@
 		  This exception is thrown when the thread is interrupted by another thread.
 		  
 		
-   **4-II-Using Thread class Instance method join() : t1.join()
+   **4-II-Using Thread class Instance method join() : t1.join()**
   
   
   
