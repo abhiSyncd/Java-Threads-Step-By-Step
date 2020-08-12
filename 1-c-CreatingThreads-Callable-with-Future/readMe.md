@@ -17,7 +17,7 @@
 	  
  ##  3 - Creating Callable Threads
    
-   **I - Using Callable-Interface as separate Class  .**  
+   **3-I - Using Callable-Interface as separate Class  .**  
     
       public static void main(String[] args) throws InterruptedException, ExecutionException {
 
@@ -59,9 +59,10 @@
          b)Future.get() is used to retrieve the result of computation.
            Main-Thread is blocked untill Future.get() is called
 	       
-	
 
-  **II - Using Callable-Interface as Anonymous Inner Class**  
+
+
+  **3-II - Using Callable-Interface as Anonymous Inner Class**  
   
      public static void main(String[] args) throws InterruptedException, ExecutionException {
 
@@ -83,18 +84,23 @@
 
 	}
   
- ## 
- 
-  **III - Using Lambda** 
-  
-      ExecutorService executor = Executors.newFixedThreadPool(10);
-      Future<String> future = executor.submit(()->{
-		Thread.sleep(2000L);
-		return ("DB-RESPONSE");
-      });
-		
-      System.out.println("Response from seperate thread : " + future.get());
-		
-      executor.shutdown();
 
-      System.out.println("Main Thread Resumes : " + Thread.currentThread().getName());
+
+ 
+  **3-III - Using Lambda** 
+  
+     public static void main(String[] args) throws InterruptedException, ExecutionException {
+
+		ExecutorService executor = Executors.newFixedThreadPool(10);
+		Future<String> future = executor.submit(() -> {
+			Thread.sleep(2000L);
+			return ("DB-RESPONSE");
+		});
+
+		System.out.println("Response from seperate thread : " + future.get());
+
+		executor.shutdown();
+
+		System.out.println("Main Thread Resumes : " + Thread.currentThread().getName());
+
+	}
