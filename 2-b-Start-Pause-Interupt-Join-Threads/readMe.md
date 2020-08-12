@@ -80,8 +80,9 @@
         stop when it comes out of run() method, either normally or due to any exception
 
 
-  **5-II)Solution : Thread class's interrupt() method**
+  **5-II)Solution :Using Thread class interrupt() mehod** 
   
-  
-  
-  
+	Interrupting a thread can be used to stop or resume the execution of that thread from another thread
+	Refer Links : 
+	   https://www.codejava.net/java-core/concurrency/how-to-use-threads-in-java-create-start-pause-interrupt-and-join
+           https://www.youtube.com/watch?v=-7ZB-jpaPPo
