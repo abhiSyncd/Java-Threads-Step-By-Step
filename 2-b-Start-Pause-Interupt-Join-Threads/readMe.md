@@ -64,7 +64,7 @@
 		  This exception is thrown when the thread is interrupted by another thread.
 		  
 		
-   **4-II-Using Thread class Instance method join() : t1.join()**
+   **4-II-[Using Thread class Instance method join() : t1.join()](https://github.com/abhiSyncd/Java-Threads-Step-By-Step/tree/master/2-a-SequentialExecutionOfThreads-UsingJoin)**
   
   
   
