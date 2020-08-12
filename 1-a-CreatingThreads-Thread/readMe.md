@@ -34,7 +34,8 @@
         As JVM schedular makes descision about which runnable threads will go into 'RUNNING' state.
 	If you run this program again for several times, you will see sometimes the thread Thread-0 runs first, sometimes the thread main runs first.
 	 
-	 
+	
+	
 
 ##  2 - Using Thread Class as Anonymous Inner Class 
 
@@ -51,6 +52,7 @@
 	 
        }
      }  
+
 
 
 
