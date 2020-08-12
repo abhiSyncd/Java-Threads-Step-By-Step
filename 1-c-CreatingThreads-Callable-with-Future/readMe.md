@@ -60,7 +60,6 @@
            Main-Thread is blocked untill Future.get() is called
 	       
 	
-## 
 
   **II - Using Callable-Interface as Anonymous Inner Class**  
   
