@@ -39,7 +39,6 @@
       public class MyCallable implements Callable<String> {
             @Override
             public String call() throws Exception {
-                Thread.sleep(2000L);
                 return ("DB-RESPONSE");
             }
        }
@@ -70,7 +69,6 @@
 		Callable<String> callable = new Callable<String>() {
 			@Override
 			public String call() throws Exception {
-				Thread.sleep(2000L);
 				return ("DB-RESPONSE");
 			}
 		};
