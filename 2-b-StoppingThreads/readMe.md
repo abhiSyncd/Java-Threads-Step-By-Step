@@ -4,8 +4,14 @@ STOPPING THREADS
 https://praveer09.github.io/technology/2015/12/06/understanding-thread-interruption-in-java/
 https://codepumpkin.com/interrupt-interrupted-isinterrupted-java-multithreading/
 
+## 1 - Use Case 
 
-## 1 - Problem  : Java Threads cannot be killed
+    Thread Timeout : 
+    A thread performing a long running task.
+    Stop that thread if it takes more than a specified time 
+
+
+## 2 - Problem : But Java Threads cannot be Stpped or killed
  
         Runnable runnable = () -> {
          //Long running task in a separate thread other than Main thread
@@ -13,7 +19,7 @@ https://codepumpkin.com/interrupt-interrupted-isinterrupted-java-multithreading/
         new Thread(runnable).start();
 
         It's easy to start a thread in Java because you have a start() method but 
-        it's difficult to stop the thread because there is no stop() method in Thread Class.
+        it's difficult to STOP the thread because there is no stop() or Cancel() method in Thread Class.
         If you remember, 
         threads in Java start execution from run() method and 
         stop when it comes out of run() method, either normally or due to any exception
@@ -37,14 +43,10 @@ https://codepumpkin.com/interrupt-interrupted-isinterrupted-java-multithreading/
            
            
          
-         
-       
-       
-    
-    
------------------------------------------------------------------------------------
 
-2 - Ways to Stop Thread 
+## 3 - Solution 
+
+  ** 3-I-Using Interrupts 
 
   Source : https://www.youtube.com/watch?v=_RSAS-gIjGo
 
