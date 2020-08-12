@@ -82,7 +82,7 @@
        
     iii)Synchronize vs ReetrantLock
   
-    iv)Types of Extrinsic Lock in Java : L ock
+    iv)Lock API : Types of Extrinsic Lock in Java
        - ReentrantLock
        - ReadWriteLock
        - StampedLock (Java 8)
