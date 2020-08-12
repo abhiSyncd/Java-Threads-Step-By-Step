@@ -187,20 +187,56 @@
    
        a)Reetrant Locks performance is good in case we have large no. of threads accessing the shared resoource
 
-       b) FAIRNESS : ReentrantLock lock = new ReentrantLock(true)
+       b) FAIRNESS : 
           Synchronze keyword is UNFAIR
           But Reetrant Locks can both be UNFAIR and FAIR.
+          
+          By Default Reetrant locks are UNFAIR :  ReentrantLock lock = new ReentrantLock() 
+          Suppose Threads T1,T2,T3 comes at same time and 
+          - T1 first aquires the lock using  lock.lock() and Becomes RUNNABLE ,
+          - Then T2,T3 will go in WAIT State and will be put into a QUEUE(FIFO).
+          - T1 completes and release the lock using lock.unlock() and gets into TERMINATED state 
+          - Then at the same time a new thread T4 comes in and tries to aquire a lock.
+            ReentrantLock Instead of putting it in a queue allows T5 to aquire a Lock, instead of T2,T3 is in a wait state
+
+              
+         But if we write : ReentrantLock lock = new ReentrantLock(true) , Then Lock becomes a Fair Lock.
+         Suppose Threads t1,t2,t3 comes at same time and 
+         - Thread t1 first aquires the lock using  lock.lock() and Becomes RUNNABLE ,
+         - Then Threads t2,t3 will got in WAIT State and will be put into a QUEUE(FIFO).
+         - Thread t1 completes and release the lock using lock.unlock() and gets into TERMINATED state 
+         - Then the longest waiting thread will ge given a chance to aquire a lock.
+              
+         This avoids "Starvation" and thus increases performances
+             
              
        c) Timed | Polled Lock Acquisition
-          - synchronized keyword, a thread can be blocked waiting for a lock, for an indefinite period of time and there was no way to control that.
-             In Intrinsic-Lock (using synchronizeeyword ) Lock-Timeout is not possible
+         - synchronized keyword, a thread can be blocked waiting for a lock, for an indefinite period of time and there was no way to control that.
+           In Intrinsic-Lock (using synchronizeeyword ) Lock-Timeout is not possible
              
-              Thread-1 acquires a lock on shared-object and if doesn’t unlock the data
-              Thread-2-request-thread on WAIT state to acquire the same lock, either
-                - Till specified Time and returns with an Exception thrown : Timed lock-acquisition
-                - Poll it at specific time                                 : Polled lock-acquisition
+          Thread-1 acquires a lock on shared-object and if doesn’t unlock the data
+          Thread-2-request-thread on WAIT state to acquire the same lock, either
+           - Till specified Time and returns with an Exception thrown : Timed lock-acquisition
+           - Poll it at specific time                                 : Polled lock-acquisition
 
           - This avoids "Deadlock"
+         
+         
+          https://www.callicoder.com/java-locks-and-atomic-variables-tutorial/
+         It lets you regain control if you cannot acquire all the required locks, release the ones you have acquired and retry.
+         
+
+               The second difference between synchronized and Reentrant lock is tryLock() method. 
+               ReentrantLock provides a convenient tryLock() method, which acquires lock only if its available or not held by any other thread. 
+               This reduces the blocking of thread waiting for lock-in Java application.
+
+
+      https://www.baeldung.com/java-concurrent-locks
+      https://gist.github.com/vikasverma787/9acfb081c4f4364b8100557635cc6178
+
+      Read more: https://javarevisited.blogspot.com/2013/03/reentrantlock-example-in-java-synchronized-difference-vs-lock.html#ixzz6UAKfxgmo
+
+
 
 
        d) LOCK INTERRUPTIBILY : https://javarevisited.blogspot.com/2013/03/reentrantlock-example-in-java-synchronized-difference-vs-lock.html
@@ -238,42 +274,7 @@
              As a result Threads who are waiting to aquire the lock will always be in WAITing state.
              So we must always Release the lock in finally block, so that other waiting threads can continue its processing
 
-      
- **2 - Fairness**  
- 
-       By Default Reetrant locks are UNFAIR :  ReentrantLock lock = new ReentrantLock() 
-       Suppose Threads T1,T2,T3 comes at same time and 
-       - T1 first aquires the lock using  lock.lock() and Becomes RUNNABLE ,
-       - Then T2,T3 will go in WAIT State and will be put into a QUEUE(FIFO).
-       - T1 completes and release the lock using lock.unlock() and gets into TERMINATED state 
-       - Then at the same time a new thread T4 comes in and tries to aquire a lock.
-         ReentrantLock Instead of putting it in a queue allows T5 to aquire a Lock, instead of T2,T3 is in a wait state
-
-              
-        But if we write : ReentrantLock lock = new ReentrantLock(true) , Then Lock becomes a Fair Lock.
-        Suppose Threads t1,t2,t3 comes at same time and 
-        - Thread t1 first aquires the lock using  lock.lock() and Becomes RUNNABLE ,
-        - Then Threads t2,t3 will got in WAIT State and will be put into a QUEUE(FIFO).
-        - Thread t1 completes and release the lock using lock.unlock() and gets into TERMINATED state 
-        - Then the longest waiting thread will ge given a chance to aquire a lock.
-              
-         This avoids "Starvation" and thus increases performances
-          
- 
-  **3 - Timed and polled lock-acquisition**  : https://www.callicoder.com/java-locks-and-atomic-variables-tutorial/
-         It lets you regain control if you cannot acquire all the required locks, release the ones you have acquired and retry.
-         
-         
-         The second difference between synchronized and Reentrant lock is tryLock() method. ReentrantLock provides a convenient tryLock() method, which acquires lock only if its available or not held by any other thread. This reduces the blocking of thread waiting for lock-in Java application.
-
-
-https://www.baeldung.com/java-concurrent-locks
-https://gist.github.com/vikasverma787/9acfb081c4f4364b8100557635cc6178
-
-Read more: https://javarevisited.blogspot.com/2013/03/reentrantlock-example-in-java-synchronized-difference-vs-lock.html#ixzz6UAKfxgmo
-
-
-         
+     
   
   
 ################################################################################################
