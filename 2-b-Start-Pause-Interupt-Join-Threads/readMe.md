@@ -85,4 +85,5 @@
 	Interrupting a thread can be used to stop or resume the execution of that thread from another thread
 	Refer Links : 
 	   https://www.codejava.net/java-core/concurrency/how-to-use-threads-in-java-create-start-pause-interrupt-and-join
+	   https://codepumpkin.com/interrupt-interrupted-isinterrupted-java-multithreading/
            https://www.youtube.com/watch?v=-7ZB-jpaPPo
