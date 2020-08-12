@@ -34,7 +34,7 @@
 
   ## 2)Running Thread
   
-     There’s no guarantee of which thread runs first as they are both started concurrently
+     Thereâ€™s no guarantee of which thread runs first as they are both started concurrently
      As JVM schedular makes descision about which runnable threads will go into 'RUNNING' state.
      If you run this program again for several times, you will see sometimes the thread Thread-0 runs first, 
      sometimes the thread main runs first.
@@ -43,13 +43,13 @@
   ## 3)Terminating a Thread 
   
      Thread-0     : terminates as soon as its run() method runs to complete or any exception occurs , and the thread 
-	  main-thread  : terminates after the main() method completes its execution
+     main-thread  : terminates after the main() method completes its execution
 	
 	
   ## 4)WAITING a thread 
     
 	
-	**4-I-Using Thread class static sleep() method : Thread.sleep()
+   **4-I-Using Thread class static sleep() method : Thread.sleep()
 	
 		try {
 			Thread.sleep(2000);
@@ -62,18 +62,26 @@
 		
 		- InterruptedException is a checked exception so you must handle it. 
 		  This exception is thrown when the thread is interrupted by another thread.
+		  
 		
-	**4-II-Using Thread class Instance method join() : t1.join()
+   **4-II-Using Thread class Instance method join() : t1.join()
+  
   
   
   ## 5)Interrupting a Thread 
         
-		- Problem : Stopping a thread
-		  It's easy to start a thread in Java because you have a start() method but 
+	
+   **5-I)Problem : Java Threads cannot be Stopped or killed**
+  
+        It's easy to start a thread in Java because you have a start() method but 
         it's difficult to STOP the thread because there is no stop() or cancel() method in Thread Class.
         If you remember, 
         threads in Java start execution from run() method and 
         stop when it comes out of run() method, either normally or due to any exception
-		
-      - Solution : Thread class's interrupt() method 
-	
+
+
+  **5-II)Solution : Thread class's interrupt() method**
+  
+  
+  
+  
