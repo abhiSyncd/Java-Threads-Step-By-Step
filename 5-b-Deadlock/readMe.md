@@ -16,39 +16,35 @@
     
    **Ex)**
     
-    public class Main {
+   	public static void main(String[] args) {
 
-      String object1 = "Java";
-      String object2 = "UNIX";
+		final Object resource1 = "resource1";
+		final Object resource2 = "resource2";
 
-      Thread trd1 = new Thread("My Thread 1") {
-        public void run() {
-          synchronized (object1) {
-            System.out.println("Thread 1 ->" + object1);
-            synchronized (object2) {
-              System.out.println("Thread 1 ->" + object1 + object2);
-            }
-          }
-        }
-      };
+		Thread t1 = new Thread(() -> {
+			synchronized (resource1) {
+				System.out.println("Thread 1: locked resource 1");
+				synchronized (resource2) {
+					System.out.println("Thread 1: locked resource 2");
+				}
+			}
 
-      Thread trd2 = new Thread() {
-        public void run() {
-          synchronized (object2) {
-            System.out.println("Thread 2 ->" + object2);
-            synchronized (object1) {
-              System.out.println("Thread 2 ->" + object2 + object1);
-            }
-          }
-        }
-      };
+		});
 
-      public static void main(String a[]) {
-        Main mdl = new Main();
-        mdl.trd1.start();
-        mdl.trd2.start();
-      }
-    }
+		Thread t2 = new Thread(() -> {
+			synchronized (resource2) {
+				System.out.println("Thread 2: locked resource 2");
+				synchronized (resource1) {
+					System.out.println("Thread 2: locked resource 1");
+				}
+			}
+
+		});
+
+		t1.start();
+		t2.start();
+
+	}
 	 
   
 ## 2 - SOLUTION :   
