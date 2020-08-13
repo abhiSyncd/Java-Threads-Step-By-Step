@@ -3,9 +3,12 @@
 
 ## 1 - Problem : 
 
-    Deadlock and Starvation both are the conditions where the processes requesting for a resource has been delayed for a long|Indefinite time. 
+     Deadlock and Starvation both are the conditions where the processes requesting for a resource 
+     has been delayed for a long|Indefinite time. 
     
-     - Deadlock   : No Threads proceeds for execution, and each waits for shared-resources that have been acquired by the other Threads.
+     - Deadlock : 
+       No Threads proceeds for execution and 
+       each waits for shared-resources that have been acquired by the other Threads.
      
      - Starvation  
         Starvation occurs in priority scheduling algorithm. 
@@ -18,7 +21,7 @@
         
       
         
-## 1 - Solution : 
+## 2 - Solution : 
 
       Synchronze keyword is UNFAIR
       But Reetrant Locks can both be UNFAIR and FAIR.
