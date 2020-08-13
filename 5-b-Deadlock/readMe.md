@@ -33,12 +33,12 @@
    - Lock Timeout
    - Deadlock Detection
    
-   **[3-I-Lock Ordering_Using Synchronized](https://github.com/abhiSyncd/Java-Threads-Step-By-Step/blob/master/5-b-Deadlock/src/main/b_Solution_UsingSynchronized.java)**
+   **[3-I-Lock Ordering_: Using Synchronized](https://github.com/abhiSyncd/Java-Threads-Step-By-Step/blob/master/5-b-Deadlock/src/main/b_Solution_UsingSynchronized.java)**
    
-   **[3-II-Lock Ordering_Using ReetrantLock](https://github.com/abhiSyncd/Java-Threads-Step-By-Step/blob/master/5-b-Deadlock/src/main/d__Solution_1_UsingReetrantLock_Reordering.java)**
+   **[3-II-Lock Ordering : Using ReetrantLock's TryLock](https://github.com/abhiSyncd/Java-Threads-Step-By-Step/blob/master/5-b-Deadlock/src/main/d__Solution_1_UsingReetrantLock_Reordering.java)**
             
    
-   **[3-III-Lock Timeout_Using_TryLock_witht_Timeout](https://github.com/abhiSyncd/Java-Threads-Step-By-Step/blob/master/5-b-Deadlock/src/main/e__Solution_2_UsingReetrantLock_TryLock_with_Timeout.java)**
+   **[3-III-Lock Timeout_: Using_ReetrantLock's TryLock_with_Timeout](https://github.com/abhiSyncd/Java-Threads-Step-By-Step/blob/master/5-b-Deadlock/src/main/e__Solution_2_UsingReetrantLock_TryLock_with_Timeout.java)**
    
    **3-IV-Deadlock Detection**
    
