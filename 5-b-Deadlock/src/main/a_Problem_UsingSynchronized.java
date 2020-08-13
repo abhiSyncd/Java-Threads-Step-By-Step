@@ -1,6 +1,6 @@
 package main;
 
-public class MyMain {
+public class a_Problem_UsingSynchronized {
 
 	public static void main(String[] args) {
 
@@ -9,9 +9,9 @@ public class MyMain {
 
 		Thread t1 = new Thread(() -> {
 			synchronized (resource1) {
-				System.out.println("Thread 1: locked " + resource1);
+				System.out.println("Thread 1 locked: " + resource1);
 				synchronized (resource2) {
-					System.out.println("Thread 1: locked " + resource2);
+					System.out.println("Thread 1 locked: " + resource2);
 				}
 			}
 
@@ -19,9 +19,9 @@ public class MyMain {
 
 		Thread t2 = new Thread(() -> {
 			synchronized (resource2) {
-				System.out.println("Thread 2: locked " + resource2);
+				System.out.println("Thread 2 locked: " + resource2);
 				synchronized (resource1) {
-					System.out.println("Thread 2: locked " + resource1);
+					System.out.println("Thread 2 locked: " + resource1);
 				}
 			}
 
@@ -32,5 +32,3 @@ public class MyMain {
 
 	}
 }
-
-  // Ex.2)https://gist.github.com/jirkapinkas/ce1285df9a06d7ba094eb78997942563
