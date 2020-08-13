@@ -1,52 +1,22 @@
 
 
-## 1 - Deadlock Problem : 
-
-   https://web.mit.edu/6.005/www/fa15/classes/23-locks/
-     
-     
-    synchronized keyword can cause Deadlock.
-    Deadlock occurs when there are Thwo Threads, both of which are holding an Object that other thread wants.
-    So both the threads will simply wait, wait and wait.
+## 1 - What is Deadlock : 
     
-    Refer : https://www.youtube.com/watch?v=B4IVu-2hCos 
-            https://dzone.com/articles/investigating-deadlocks-%E2%80%93-part-1  
-	    https://www.codejava.net/java-core/concurrency/understanding-deadlock-livelock-and-starvation-with-code-examples-in-java
-    
-    
-   **Ex)**
+     Race Condition is a problem that arises when multiple threads access and WRITE on  
+     the same resource (Variable | Arrays | ObjectDatabase | web-services) at the same time.
      
-	  public static void main(String[] args) {
+     Deadlock is a problem arises when there are Thwo Threads, both of which are holding an Object that other thread is waiting for.
+     So both the threads will simply wait, wait and wait.
 
-		final Object resource1 = "resource1";
-		final Object resource2 = "resource2";
-
-		Thread t1 = new Thread(() -> {
-			synchronized (resource1) {
-				System.out.println("Thread 1: locked " + resource1);
-				synchronized (resource2) {
-					System.out.println("Thread 1: locked " + resource2);
-				}
-			}
-
-		});
-
-		Thread t2 = new Thread(() -> {
-			synchronized (resource2) {
-				System.out.println("Thread 2: locked " + resource2);
-				synchronized (resource1) {
-					System.out.println("Thread 2: locked " + resource1);
-				}
-			}
-
-		});
-
-		t1.start();
-		t2.start();
-          }
-
-         Here, 
-	 
+   
+ ## 2 - Problem : Creating Deadlock
+ 
+   **[2-I-Using synchrnized Keyword](https://github.com/abhiSyncd/Java-Threads-Step-By-Step/blob/master/5-b-Deadlock/src/main/a_Problem_UsingSynchronized.java)**
+   
+   **[2-II-Using Reetrant Lock](https://github.com/abhiSyncd/Java-Threads-Step-By-Step/blob/master/5-b-Deadlock/src/main/c_Problem_UsingReetrantLock.java)**
+   
+    Here In above both cases
+   
          Thread-1 
 	   - Acquires Lock on resource-a 
 	   - waiting to acquire lock on resource-b But before it can acquire lock on resource-b 
@@ -55,13 +25,15 @@
 	   - Acquires Lock on resource-b
 	   - waiting to acquire lock on resource-a But before it can acquire lock on resource-a, 
 	     Thread-1 Acquires Lock on resource-a
-    	 
+	     
   
-## 2 - SOLUTION :   
-    
-    - Lock Ordering
-    - Lock Timeout : Not possible in Intrinsic Lock but possible in Extrinsic Lock
-    - Deadlock Detection           
-
-
-	 
+## 3 - SOLUTION :   
+   
+   **[3-I-Lock Ordering](https://github.com/abhiSyncd/Java-Threads-Step-By-Step/blob/master/5-b-Deadlock/src/main/b_Solution_UsingSynchronized.java)**
+     
+   
+   **[3-II-Lock Timeout](https://github.com/abhiSyncd/Java-Threads-Step-By-Step/blob/master/5-b-Deadlock/src/main/d__Solution_UsingReetrantLock.java)**
+   
+   **[3-III-Deadlock Detection ]**
+   
+   
