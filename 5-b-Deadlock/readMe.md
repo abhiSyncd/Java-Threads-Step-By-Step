@@ -27,13 +27,19 @@
 	     Thread-1 Acquires Lock on resource-a
 	     
   
-## 3 - SOLUTION :   
+## 3 - SOLUTION : 
    
-   **[3-I-Lock Ordering](https://github.com/abhiSyncd/Java-Threads-Step-By-Step/blob/master/5-b-Deadlock/src/main/b_Solution_UsingSynchronized.java)**
-     
+   - Lock Ordering
+   - Lock Timeout
+   - Deadlock Detection
    
-   **[3-II-Lock Timeout](https://github.com/abhiSyncd/Java-Threads-Step-By-Step/blob/master/5-b-Deadlock/src/main/d__Solution_UsingReetrantLock.java)**
+   **[3-I-Lock Ordering_Using Synchronized](https://github.com/abhiSyncd/Java-Threads-Step-By-Step/blob/master/5-b-Deadlock/src/main/b_Solution_UsingSynchronized.java)**
    
-   **3-III-Deadlock Detection**
+   **[3-II-Lock Ordering_Using ReetrantLock](https://github.com/abhiSyncd/Java-Threads-Step-By-Step/blob/master/5-b-Deadlock/src/main/d__Solution_1_UsingReetrantLock_Reordering.java)**
+            
+   
+   **[3-III-Lock Timeout_Using_TryLock_witht_Timeout](https://github.com/abhiSyncd/Java-Threads-Step-By-Step/blob/master/5-b-Deadlock/src/main/e__Solution_2_UsingReetrantLock_TryLock_with_Timeout.java)**
+   
+   **3-IV-Deadlock Detection**
    
    
