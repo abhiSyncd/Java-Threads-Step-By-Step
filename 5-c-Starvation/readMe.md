@@ -6,6 +6,8 @@
      - Deadlock   : No Threads proceeds for execution, and each waits for shared-resources that have been acquired by the other Threads.
      - Starvation  
         Starvation occurs in priority scheduling algorithm. 
-        In priority scheduling algorithm, Higher-priority-Thread is always allocated the resource,
-        preventing the lower-priority-thread from getting the shared-resource and is unable to make progress
-        Note : Thread Priority can either be given by JVM while creating the thread or it can be given by programmer explicitly.
+        Thread Priority can either be given by JVM while creating the thread or it can be given by programmer explicitly.
+        
+        In priority scheduling algorithm, Higher-priority-Threads is always allocated the shared-resource.
+        This prevents the lower-priority-threads from getting the shared-resource and they "starves to death"
+        
