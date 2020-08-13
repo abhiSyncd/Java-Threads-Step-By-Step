@@ -89,11 +89,11 @@
 
 **2 - [DeadLocks](https://github.com/abhiSyncd/Java-Threads-Step-By-Step/tree/master/5-b-Deadlock)**
 
-    i)What is DeadLock
+     - What is DeadLock
     
-    ii)Problem : Creating Deadlock
+     - Problem : Creating Deadlock
     
-    iii)Solution
+     - Solution
     
 **3 - [Starvation](https://github.com/abhiSyncd/Java-Threads-Step-By-Step/tree/master/5-c-Starvation)**
 
