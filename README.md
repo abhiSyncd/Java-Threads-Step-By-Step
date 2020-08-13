@@ -97,9 +97,9 @@
     
 **3 - [Starvation](https://github.com/abhiSyncd/Java-Threads-Step-By-Step/tree/master/5-c-Starvation)**
 
-    i)Problem
+     - Problem
     
-    ii)Solution 
+     - Solution 
 
 **4 - [Livelock](https://github.com/abhiSyncd/Java-Threads-Step-By-Step/tree/master/5-d-Livelocks)** 
 
