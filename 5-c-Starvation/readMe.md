@@ -1,7 +1,7 @@
 
 
 
-## 1 - Problem : 
+## 1 - Problem : Starvation
 
      Deadlock and Starvation both are the conditions where the processes requesting for a resource 
      has been delayed for a long|Indefinite time. 
@@ -21,7 +21,7 @@
         
       
         
-## 2 - Solution : 
+## 2 - Solution : Fairness
 
       Previously in Race Condition we discussed 
       Synchronze keyword is UNFAIR
