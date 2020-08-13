@@ -113,7 +113,8 @@
     Solution : Make the variable v1 Volatile
   
     - This indicates JVM and Thread 
-      That do not cache value of the variable v1 in the local cache and always read it from the common-shared-main-memory 
+      That do not cache value of the variable v1 in the local cache and 
+      always read it from the common-shared-main-memory 
 
 
 **6 - Other** 
