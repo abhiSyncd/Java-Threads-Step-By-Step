@@ -34,6 +34,6 @@
    
    **[3-II-Lock Timeout](https://github.com/abhiSyncd/Java-Threads-Step-By-Step/blob/master/5-b-Deadlock/src/main/d__Solution_UsingReetrantLock.java)**
    
-   **[3-III-Deadlock Detection ]**
+   **3-III-Deadlock Detection**
    
    
