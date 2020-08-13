@@ -23,6 +23,7 @@
         
 ## 2 - Solution : 
 
+      Previously in Race Condition we discussed 
       Synchronze keyword is UNFAIR
       But Reetrant Locks can both be UNFAIR and FAIR.
       
