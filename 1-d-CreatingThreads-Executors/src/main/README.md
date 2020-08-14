@@ -17,7 +17,7 @@
 
 ## Example :  
 
-		Runnable r1 = new Runnable() {
+		Runnable task1 = new Runnable() {
 		   public void run() {
 		       try {
 			    Thread.sleep(3000L);
@@ -29,7 +29,7 @@
 		};
 
 
-		 Runnable r2 = new Runnable() {
+		 Runnable task2 = new Runnable() {
 		   public void run() {
 		       try {
 			   Thread.sleep(2000L);
@@ -50,10 +50,10 @@
 		 *          Task 2 completed  - in 2 seconds
 		 * 
 		 */
-		   ExecutorService executor = Executors.newSingleThreadExecutor();
-		   executor.submit(task1);
-		   executor.submit(task2);
-		   executor.shutdown();
+		   ExecutorService executor1 = Executors.newSingleThreadExecutor();
+		   executor1.submit(task1);
+		   executor1.submit(task2);
+		   executor1.shutdown();
 		   
 		   System.out.println("Main Thread");
 		   
@@ -72,10 +72,10 @@
 		 * 
 		 *
 		 */
-		   ExecutorService executor = Executors.newCachedThreadPool(); // or newFixedThreadPool(10)
-		   executor.submit(task1);
-		   executor.submit(task2);
-		   executor.shutdown();
+		   ExecutorService executor2 = Executors.newCachedThreadPool(); // or newFixedThreadPool(10)
+		   executor2.submit(task1);
+		   executor2.submit(task2);
+		   executor2.shutdown();
 		   
 		   System.out.println("Main Thread");
 		  
@@ -91,9 +91,9 @@
 		 * 
 		 */
 		
-		   ScheduledExecutorService executor = Executors.newScheduledThreadPool(2);
-		   executor.schedule(task1, 2 , TimeUnit.SECONDS);
-		   executor.shutdown();
+		   ScheduledExecutorService executor3 = Executors.newScheduledThreadPool(2);
+		   executor3.schedule(task1, 2 , TimeUnit.SECONDS);
+		   executor3.shutdown();
 		   
 		   System.out.println("Main Thread");
 		 
@@ -112,8 +112,8 @@
 		*          Task 1 completed - in 2 seconds and so on after every 2 seconds
 		* 
 		*/
-		  ScheduledExecutorService executor = Executors.newScheduledThreadPool(2);
-			  executor.scheduleAtFixedRate(task1, 1, 2, TimeUnit.SECONDS);
+		  ScheduledExecutorService executor4 = Executors.newScheduledThreadPool(2);
+			  executor4.scheduleAtFixedRate(task1, 1, 2, TimeUnit.SECONDS);
 			  System.out.println("Main Thread");
 		
                 
