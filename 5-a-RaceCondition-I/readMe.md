@@ -166,7 +166,8 @@
        - synchronized-static-method   : it acquires the lock over all the class objects
 
       Since JVM manages the Intrinsic locking, 
-      The lock is only released when the thread is done executing the method OR an exception is thrown in the method which is not handled/caught.
+      The lock is only released when the thread is done executing the method OR 
+      an exception is thrown in the method which is not handled/caught.
 
       As long as a thread owns an intrinsic lock, all other threads are blocked no other thread can acquire the same lock.
       Even Thread.sleep() inside the synchronized method doesn't release the lock.
@@ -185,7 +186,7 @@
    
    **Synchronize vs ReetrantLock** 
    
-       a)Reetrant Locks performance is good in case we have large no. of threads accessing the shared resoource
+       a) Reetrant Locks performance is good in case we have large no. of threads accessing the shared resoource
 
        b) FAIRNESS : 
           Synchronze keyword is UNFAIR
@@ -219,11 +220,12 @@
            - Till specified Time and returns with an Exception thrown : Timed lock-acquisition
            - Poll it at specific time                                 : Polled lock-acquisition
 
-          - This avoids "Deadlock"
+           - This avoids "Deadlock" using ReetrantLock.tryLock(1, TimeUnit.SECONDS) in : 
+             https://github.com/abhiSyncd/Java-Threads-Step-By-Step/blob/master/5-b-Deadlock/src/main/e__Solution_2_UsingReetrantLock_TryLock_with_Timeout.java
          
          
           https://www.callicoder.com/java-locks-and-atomic-variables-tutorial/
-         It lets you regain control if you cannot acquire all the required locks, release the ones you have acquired and retry.
+              It lets you regain control if you cannot acquire all the required locks, release the ones you have acquired and retry.
          
 
                The second difference between synchronized and Reentrant lock is tryLock() method. 
