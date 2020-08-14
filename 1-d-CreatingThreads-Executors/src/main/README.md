@@ -92,7 +92,7 @@
 		 *          Task 1 completed - in 2 seconds  
 		 *  
 		 * 
-                 */
+		 */
 		
 		   ScheduledExecutorService executor = Executors.newScheduledThreadPool(2);
 		   executor.schedule(task1, 2 , TimeUnit.SECONDS);
@@ -114,7 +114,7 @@
 		*          Task 1 completed - in 2 seconds 
 		*          Task 1 completed - in 2 seconds and so on after every 2 seconds
 		* 
-                */
+		*/
 		  ScheduledExecutorService executor = Executors.newScheduledThreadPool(2);
 			  executor.scheduleAtFixedRate(task1, 1, 2, TimeUnit.SECONDS);
 			  System.out.println("Main Thread");
