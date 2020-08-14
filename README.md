@@ -179,7 +179,7 @@
 ## Section 6 - [Java Memory Model](https://github.com/abhiSyncd/Java-Threads-Step-By-Step/tree/master/7-a-Java-Memory-Model)
 ###################################################################################
      
-      1- Stack vs Heap
+      1 - Stack vs Heap
       2 - Garbage Collection 
       3 - Types of Garbage Collectors
  
