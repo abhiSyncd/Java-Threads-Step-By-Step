@@ -176,7 +176,7 @@
 
 
 ###################################################################################
-## Section 6 - Java Memory Model
+## Section 6 - [Java Memory Model](https://github.com/abhiSyncd/Java-Threads-Step-By-Step/tree/master/7-a-Java-Memory-Model)
 ###################################################################################
      
       1- Stack vs Heap
