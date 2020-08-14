@@ -17,38 +17,38 @@
 
 ## Example :  
 
-        Runnable r1 = new Runnable() {
-	   public void run() {
-	       try {
-		    Thread.sleep(3000L);
-		    System.out.println("Task 1 completed");
-		} catch (Exception e) {
-		    e.printStackTrace();
-		}
-	  }
-	};
+		Runnable r1 = new Runnable() {
+		   public void run() {
+		       try {
+			    Thread.sleep(3000L);
+			    System.out.println("Task 1 completed");
+			} catch (Exception e) {
+			    e.printStackTrace();
+			}
+		  }
+		};
+
+
+		 Runnable r2 = new Runnable() {
+		   public void run() {
+		       try {
+			   Thread.sleep(2000L);
+			   System.out.println("Task 2 completed");
+			} catch (Exception e) {
+			    e.printStackTrace();
+			}
+		  }
+		};
         
         
-         Runnable r2 = new Runnable() {
-	   public void run() {
-	       try {
-		   Thread.sleep(2000L);
-                   System.out.println("Task 2 completed");
-		} catch (Exception e) {
-		    e.printStackTrace();
-		}
-	  }
-	};
-        
-        
-                /**
+               /**
 		 * I - Sequential Execution of Child Threads : 
 		 * 
 		 * Output : Main Thread
 		 *          Task 1 completed  - in 3 seconds
 		 *          Task 2 completed  - in 2 seconds
 		 * 
-		*/
+		 */
 		   ExecutorService executor = Executors.newSingleThreadExecutor();
 		   executor.submit(task1);
 		   executor.submit(task2);
@@ -81,10 +81,7 @@
 		 
 		  
 		
-		
-		
-
-		/**
+                /**
 		 * III - Execute A Runnable Task After specified Delay(2 seconds)
 		 * 
 		 * Output : Main Thread 
