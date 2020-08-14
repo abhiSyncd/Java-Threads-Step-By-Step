@@ -1,7 +1,7 @@
   
-  **1 - JVM divides memory into stack and heap memory.**    
+  ## 1 - JVM divides memory into stack and heap memory   
      
-   ***i) - Stack Area***
+   **i) Stack Area**
    
       a) Whenever a new method is invoked by a Thread 
          A Thread creates its own THREAD-STACK, which is invisible to all other threads.
@@ -21,7 +21,7 @@
       d) Faster compared to HEAP-AREA
    
    
-   ***ii) - Heap Area***  
+   **ii) Heap Area**  
        
        a) All Threads share the HEAP-AREA,
           which makes it Not-Thread-Safe
@@ -35,9 +35,9 @@
        d) Slower compared to STACK-AREA
 
   
-   **2 - Garbage Collector**
+## 2 - Garbage Collector
      
-   ***i) HEAP AREA further divided into***   
+   **i) HEAP AREA further divided into**  
     
 	 a)YOUNG-GENERATION  
 	   - this is where all new objects are allocated and aged. A minor Garbage collection occurs when this fills up
@@ -55,7 +55,7 @@
 	   - Note : PermGenSpace vs Metaspace(Java 8)
 	   
 	   
-   ***ii) Garbage Collector Steps***  
+   **ii) Garbage Collector Steps**  
    
 	 a) YOUNG GENERATION
 	 
@@ -89,7 +89,7 @@
          Source : https://www.youtube.com/watch?v=UnaNQgzw4zY
 
 
- ***iii) Garbage Collector Types*** 
+ **iii) Garbage Collector Types** 
         
 	a)A serial Collector 
 
