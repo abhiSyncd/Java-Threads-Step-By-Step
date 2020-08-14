@@ -41,7 +41,7 @@
 		};
         
         
-               /**
+                /**
 		 * I - Sequential Execution of Child Threads : 
 		 * 
 		 * Output : Main Thread
@@ -80,8 +80,7 @@
 		  
 		 
 		  
-		
-                /**
+		/**
 		 * III - Execute A Runnable Task After specified Delay(2 seconds)
 		 * 
 		 * Output : Main Thread 
