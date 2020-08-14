@@ -47,7 +47,6 @@ public class e__Solution_2_UsingReetrantLock_TryLock_with_Timeout {
 
 				}
 			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			} finally {
 				lock2.unlock();
