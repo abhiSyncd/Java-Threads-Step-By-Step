@@ -1,4 +1,4 @@
-Semaphores – limit how many background Threads (Jobs) are allowed to run concurrently
+Semaphores – RATE LIMITER : limit how many background Threads (Jobs) are allowed to run concurrently
 
 Semaphores – Restrict the number of threads that can access a resource. Example, limit max 10 connections to access a file simultaneously.
 
