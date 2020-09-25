@@ -224,7 +224,7 @@
             - Till specified Time and returns with an Exception thrown : Timed lock-acquisition
             - Poll it at specific time                                 : Polled lock-acquisition
 
-            - This avoids "Deadlock" using ReetrantLock.tryLock(1, TimeUnit.SECONDS) in : 
+            - This avoids "Deadlock" using ReetrantLock.tryLock(1, TimeUnit.SECONDS) in :  acquire lock and automatically unlock it after 10 seconds
               https://github.com/abhiSyncd/Java-Threads-Step-By-Step/blob/master/5-b-Deadlock/src/main/e__Solution_2_UsingReetrantLock_TryLock_with_Timeout.java
          
          
