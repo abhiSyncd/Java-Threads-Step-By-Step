@@ -212,29 +212,33 @@
              
              
        c) Timed | Polled Lock Acquisition
+       
+           What happens if the lock owner doesn’t release it? 
+           The lock will be held forever and we could be in a deadlock. To prevent this issue, we will set an expiration time on the lock, so the lock will be auto-released.
+    
          - synchronized keyword, a thread can be blocked waiting for a lock, for an indefinite period of time and there was no way to control that.
            In Intrinsic-Lock (using synchronizeeyword ) Lock-Timeout is not possible
              
-          Thread-1 acquires a lock on shared-object and if doesn’t unlock the data
-          Thread-2-request-thread on WAIT state to acquire the same lock, either
-           - Till specified Time and returns with an Exception thrown : Timed lock-acquisition
-           - Poll it at specific time                                 : Polled lock-acquisition
+           Thread-1 acquires a lock on shared-object and if doesn’t unlock the data
+           Thread-2-request-thread on WAIT state to acquire the same lock, either
+            - Till specified Time and returns with an Exception thrown : Timed lock-acquisition
+            - Poll it at specific time                                 : Polled lock-acquisition
 
-           - This avoids "Deadlock" using ReetrantLock.tryLock(1, TimeUnit.SECONDS) in : 
-             https://github.com/abhiSyncd/Java-Threads-Step-By-Step/blob/master/5-b-Deadlock/src/main/e__Solution_2_UsingReetrantLock_TryLock_with_Timeout.java
+            - This avoids "Deadlock" using ReetrantLock.tryLock(1, TimeUnit.SECONDS) in : 
+              https://github.com/abhiSyncd/Java-Threads-Step-By-Step/blob/master/5-b-Deadlock/src/main/e__Solution_2_UsingReetrantLock_TryLock_with_Timeout.java
          
          
-             https://www.callicoder.com/java-locks-and-atomic-variables-tutorial/
-             It lets you regain control if you cannot acquire all the required locks, release the ones you have acquired and retry.
+              https://www.callicoder.com/java-locks-and-atomic-variables-tutorial/
+              It lets you regain control if you cannot acquire all the required locks, release the ones you have acquired and retry.
          
 
-             The second difference between synchronized and Reentrant lock is tryLock() method. 
-             ReentrantLock provides a convenient tryLock() method, which acquires lock only if its available or not held by any other thread. 
-             This reduces the blocking of thread waiting for lock-in Java application.
+              The second difference between synchronized and Reentrant lock is tryLock() method. 
+              ReentrantLock provides a convenient tryLock() method, which acquires lock only if its available or not held by any other thread. 
+              This reduces the blocking of thread waiting for lock-in Java application.
 
 
-             https://www.baeldung.com/java-concurrent-locks
-             https://gist.github.com/vikasverma787/9acfb081c4f4364b8100557635cc6178
+              https://www.baeldung.com/java-concurrent-locks
+              https://gist.github.com/vikasverma787/9acfb081c4f4364b8100557635cc6178
 
       Read more: https://javarevisited.blogspot.com/2013/03/reentrantlock-example-in-java-synchronized-difference-vs-lock.html#ixzz6UAKfxgmo
 
