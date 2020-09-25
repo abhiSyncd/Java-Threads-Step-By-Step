@@ -73,7 +73,7 @@
 ################################################################################################
 
     
-**Way 1 - Intrinsic Locks : Using Synchronized keyword (Block)**
+**Way 1 - Pessimistic lock : Intrinsic Locks : Using Synchronized keyword (Block)**
       
     public class MyRunnable implements Runnable {
 
@@ -98,7 +98,7 @@
 
 
 
-**Way 2 -Extrinsic Lock  : Using ReentrantLock** 
+**Way 2 - Pessimistic lock : Extrinsic Lock  : Using ReentrantLock** 
 
     public class MyRunnable implements Runnable {
 
@@ -224,17 +224,17 @@
              https://github.com/abhiSyncd/Java-Threads-Step-By-Step/blob/master/5-b-Deadlock/src/main/e__Solution_2_UsingReetrantLock_TryLock_with_Timeout.java
          
          
-          https://www.callicoder.com/java-locks-and-atomic-variables-tutorial/
-              It lets you regain control if you cannot acquire all the required locks, release the ones you have acquired and retry.
+             https://www.callicoder.com/java-locks-and-atomic-variables-tutorial/
+             It lets you regain control if you cannot acquire all the required locks, release the ones you have acquired and retry.
          
 
-               The second difference between synchronized and Reentrant lock is tryLock() method. 
-               ReentrantLock provides a convenient tryLock() method, which acquires lock only if its available or not held by any other thread. 
-               This reduces the blocking of thread waiting for lock-in Java application.
+             The second difference between synchronized and Reentrant lock is tryLock() method. 
+             ReentrantLock provides a convenient tryLock() method, which acquires lock only if its available or not held by any other thread. 
+             This reduces the blocking of thread waiting for lock-in Java application.
 
 
-      https://www.baeldung.com/java-concurrent-locks
-      https://gist.github.com/vikasverma787/9acfb081c4f4364b8100557635cc6178
+             https://www.baeldung.com/java-concurrent-locks
+             https://gist.github.com/vikasverma787/9acfb081c4f4364b8100557635cc6178
 
       Read more: https://javarevisited.blogspot.com/2013/03/reentrantlock-example-in-java-synchronized-difference-vs-lock.html#ixzz6UAKfxgmo
 
