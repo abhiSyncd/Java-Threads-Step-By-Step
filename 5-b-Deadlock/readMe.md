@@ -29,10 +29,6 @@
   
 ## 3 - SOLUTION : 
    
-   - Lock Ordering
-   - Lock Timeout
-   - Deadlock Detection
-   
    **[3-I-Lock Ordering : Using Synchronized](https://github.com/abhiSyncd/Java-Threads-Step-By-Step/blob/master/5-b-Deadlock/src/main/b_Solution_UsingSynchronized.java)**
    
    **[3-II-Lock Ordering : Using ReetrantLock's TryLock](https://github.com/abhiSyncd/Java-Threads-Step-By-Step/blob/master/5-b-Deadlock/src/main/d__Solution_1_UsingReetrantLock_Reordering.java)**
