@@ -1,4 +1,7 @@
 
+ 
+ https://labuladong.gitbook.io/algo-en/iv.-high-frequency-interview-problem/lru_algorithm
+
  Cache : HashMap<Key, Node>  : HashMap<Integer, DoublyLinkedListNode>
  
  i.e The HashMap will hold the key and the reference to the Node of the Doubly Linked List.
