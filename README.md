@@ -176,8 +176,25 @@
            - Immutable Class with Mutable Reference
 
 
+
 ###################################################################################
-## Section 6 - [Java Memory Model](https://github.com/abhiSyncd/Java-Threads-Step-By-Step/tree/master/7-a-Java-Memory-Model)
+## Section 5 - More on Thread Safety 
+###################################################################################
+  
+    - Immutable objects are by default thread-safe because their state can not be modified once created. 
+      Since String is immutable in Java, it's inherently thread-safe.
+    
+    - Read-only or final variables in Java are also thread-safe in Java.
+
+    - Example of thread-safe class in Java: Vector, Hashtable, ConcurrentHashMap, String, etc.
+
+    - Local variables are also thread-safe because each thread has there own copy and 
+      using local variables is a good way to write thread-safe code in Java.
+
+    - Static variables if not synchronized properly become a major cause of thread-safety issues.
+
+###################################################################################
+## Section 7 - [Java Memory Model](https://github.com/abhiSyncd/Java-Threads-Step-By-Step/tree/master/7-a-Java-Memory-Model)
 ###################################################################################
      
       1 - Stack vs Heap
@@ -185,7 +202,7 @@
       3 - Types of Garbage Collectors
  
 ###################################################################################
-## Section 7 - Implementation Examples | Use Cases MultiThreading
+## Section 8 - Implementation Examples | Use Cases MultiThreading
 ###################################################################################
 
 **1 - [LRU Cache](https://github.com/abhiLinkd/Java-Threads-Step-By-Step/tree/master/7-a-LRUCache-usingHashMap%26DoubleLinkedList)**
