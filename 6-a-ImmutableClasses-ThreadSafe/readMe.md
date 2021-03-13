@@ -8,7 +8,7 @@
 
 ## 2 - Advantage
     - Thread safe : can be shared without synchronization in concurrent environment
-  
+      Since String is immutable in Java, it's inherently thread-safe.
 
 ## 3 - Use case
     - Good choice for HashMap-Key 
