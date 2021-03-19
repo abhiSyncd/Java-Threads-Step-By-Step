@@ -288,7 +288,6 @@
 ## Section 5 - Types of Extrinsic Lock : Lock API 
 ################################################################################################
   
-  a)ReetrantLock
-  b)ReetrantReadWriteLock
-  c)Stamped Lock(Java 8) :  https://www.educative.io/courses/java-8-lambdas-stream-api-beyond/JYBojJkLlPo
-   
+    a)ReetrantLock
+    b)ReetrantReadWriteLock
+    c)Stamped Lock(Java 8) :  https://www.educative.io/courses/java-8-lambdas-stream-api-beyond/JYBojJkLlPo
