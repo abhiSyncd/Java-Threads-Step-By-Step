@@ -11,7 +11,10 @@
 
        Example : Race condition may occur when 2 user tries to book the same movie-ticket-seat at the same time 
        
-       Refer : https://www.youtube.com/watch?v=cTECanJPaIc
+       Refer : 
+       https://www.javacodemonk.com/prevent-lost-updates-in-database-transaction-using-spring-hibernate-f16d36d5
+       https://www.youtube.com/watch?v=cTECanJPaIc
+       
        
 
    **b)Example**
@@ -256,8 +259,6 @@
 ################################################################################################
 ## Section 4 - ReetrantLock 
 ################################################################################################
-
-
 
 
  **1 - What is Reetrant Lock**
