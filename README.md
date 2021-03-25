@@ -40,7 +40,7 @@
      ii) Potential Risks of Using a Thread Pool : 
      
     iii) Ideal Thread Pool Size : https://www.youtube.com/watch?v=ErNre5varF8
-      
+      https://engineering.zalando.com/posts/2019/04/how-to-set-an-ideal-thread-pool-size.html
      iv) Java Implementation of Thread Pools
            - The Executors class and Executor interface
            - Fork-Join Pool 
