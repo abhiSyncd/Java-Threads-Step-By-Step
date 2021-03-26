@@ -42,10 +42,10 @@
      Tasks which involves mathematical calculations.
      
      CPU Core
-     A single core CPU will run one thread at a time.
-     A normal desktop generally is a quad core that means there are four cores in a CPU. 
-     While a cloud or server may have as many as cores in CPU.
-          
+     Single Core : CPU will run one thread at a time.
+     Quad Core   : normal desktop generally has four cores in a CPU.
+     Multi Core  : While a cloud or server may have as many as cores in CPU.
+     Multi CPU   : Supercomputers     
 
 ## IO Bound Tasks
 
