@@ -49,14 +49,14 @@
 
 ## IO Bound Tasks
 
-**(a)Database Calls**
+**Database Calls**
 
        PROBLEM : 
        > A thread is blocked until DB response is returned.
        > The thread pool is limited by the database's connection pool size.
          Does it make any sense to have 1000 running threads in front of a database connection pool with 100 connections?
                
-**(b)Service Calls**
+**Service Calls**
 
        > A thread is blocked until DB response is returned.
        > The thread pool is limited by the throughput of this service as well.
