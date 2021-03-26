@@ -64,7 +64,7 @@
        
      
      
-# 3 - 
+# 3 - Ideal Thread Pool Size Formula
 
 **(a)**
 
