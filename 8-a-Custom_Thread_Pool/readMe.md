@@ -51,17 +51,25 @@
 
 **Database Calls**
  
-    PROBLEM : 
+    PROBLEM
     > A thread is blocked until DB response is returned.
     > The thread pool is limited by the database's connection pool size.
       Does it make any sense to have 1000 running threads in front of a database connection pool with 100 connections?
-               
+     
+    SOLUTION 
+    > Asynchronous call
+    > Configure Hikari Pool size 
+   
 **Service Calls**
 
-    PROBLEM : 
+    PROBLEM 
     > A thread is blocked until DB response is returned.
     > The thread pool is limited by the throughput of this service as well.
-       
+    
+    SOLUTION
+    > Asynchronous call
+    > Configure a Thread Pool Size
+
      
      
 # 3 - Ideal Thread Pool Size Formula
