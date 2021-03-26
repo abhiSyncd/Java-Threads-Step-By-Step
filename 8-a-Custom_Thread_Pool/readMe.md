@@ -35,7 +35,7 @@
 
 # 2 - Thread Pool Size Considerations 
 
-## I) CPU Bound Tasks
+## (I) CPU Bound Tasks
 
      Tasks which involves mathematical calculations.
      
@@ -47,7 +47,7 @@
      
      
      
-## II) IO Bound Tasks
+## (II) IO Bound Tasks
 
 **(a)Database Calls**
 
