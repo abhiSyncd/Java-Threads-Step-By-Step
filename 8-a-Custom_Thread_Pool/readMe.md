@@ -15,12 +15,9 @@
     BlockingQueue works on following rules:
     > Running Threads < CorePoolSize      : Executor creates a new thread
     > Running Threads = CorePoolSize      : Executor adds request in the queue rather than adding a new thread.
-    > Running Threads > MaximumPoolSize   : Executor throws Exception 
+    > Running Threads > MaximumPoolSize   : Requests cannot be Queued, Executor throws Exception and request is rejected
 
-    > If fewer than corePoolSize threads are running, the Executor always prefers adding a new thread rather than queuing.
-    > If corePoolSize or more threads are running, the Executor always prefers queuing a request rather than adding a new thread.
-    > If a request cannot be queued, a new thread is created unless this would exceed maximumPoolSize, in which case, the task will be rejected.
-
+   
     In the case of high load, at best we will get a thread "starvation" situation, at worst OutOfMemoryError.
     It is better to maintain control and not allow clients to "DDoS/throttle" our service.
 
