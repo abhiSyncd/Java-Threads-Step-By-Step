@@ -7,29 +7,31 @@
    
 # 1 - Need 
    
-    utilize the maximum CPU and increase the performance of java program
+    To utilize the maximum CPU and increase the performance of java program
     
-    /** Thread Pool constructor */
-    public ThreadPoolExecutor(
-                  int corePoolSize,
-                  int maximumPoolSize,
-                  long keepAliveTime,
-                  TimeUnit unit,
-                  BlockingQueue workQueue) {...}
+    - Thread Pool Executor constructor 
+      > int corePoolSize,
+      > int maximumPoolSize,
+      > long keepAliveTime,
+      > TimeUnit unit,
+      > BlockingQueue workQueue 
  
-     /** Cached Thread Pool */
-    public static ExecutorService newCachedThreadPool() {
-           return new ThreadPoolExecutor(0, Integer.MAX_VALUE,
-                                         60L, TimeUnit.SECONDS,
-                                         new SynchronousQueue());
-    }
+    - Cached Thread Pool
+      > 0
+      > Integer.MAX_VALUE,
+      > 60L, 
+      > TimeUnit.SECONDS,
+      > new SynchronousQueue()
 
 
     Here,
-    Do you see this SynchronousQueue? 
-    It means that each new task will create a new thread if all existing threads are busy. 
-    In the case of high load, at best we will get a thread "starvation" situation, at worst OutOfMemoryError.
+    Do you see this SynchronousQueue?
+    BlockingQueue works on following rules:
+    > If fewer than corePoolSize threads are running, the Executor always prefers adding a new thread rather than queuing.
+    > If corePoolSize or more threads are running, the Executor always prefers queuing a request rather than adding a new thread.
+    > If a request cannot be queued, a new thread is created unless this would exceed maximumPoolSize, in which case, the task will be rejected.
 
+    In the case of high load, at best we will get a thread "starvation" situation, at worst OutOfMemoryError.
     It is better to maintain control and not allow clients to "DDoS/throttle" our service.
 
 
@@ -43,10 +45,8 @@
      A single core CPU will run one thread at a time.
      A normal desktop generally is a quad core that means there are four cores in a CPU. 
      While a cloud or server may have as many as cores in CPU.
-     
-     
-     
-     
+          
+
 ## (II) IO Bound Tasks
 
 **(a)Database Calls**
@@ -65,25 +65,26 @@
      
 # 3 - 
 
-    Number of threads = Number of Available Cores * (1 + Wait time / Service time)
+**(a)**
+
+    -  CPU Bound Task -> Ideal thread Count  = Number of Available Cores * [ 1 + (wait time/CPU time)]
+    -  Io Bound Task  -> Ideal thread Count  = Number of Available Cores * [ 1 + (Wait time/Service time)]
     
-    Ideal thread Count= Number of Cores * [ 1+ (wait time/CPU time)]
-    
-    
-    Here,
-    Waiting time : Time spent waiting for IO bound tasks to complete, say waiting for HTTP response from remote service.
-                   Not only IO bound tasks, it could be time waiting to get monitor lock or time when thread is in WAITING/TIMED_WAITING state
+    Here :
+    Waiting time : Response Time i.e Time spent waiting for IO bound tasks to complete, 
+                   say waiting for HTTP response from remote service.
     
     Service time : Time spent being busy, say processing the HTTP response, marshaling/unmarshaling, any other transformations etc. 
     
-    
-    
-    
-    
-    Number of threads = Number of Available Cores * Target CPU utilization * (1 + Wait time / Service time)
-   
-    Here,
-    
+    But this example is oversimplified. Besides an HTTP connection pool, your application may have requests from JMS and probably a JDBC connection pool.
    
 
+**(b)**
+
+    If you have different classes of tasks it is best practice to use multiple thread pools, so each can be tuned according to its workload.
+    In case of multiple thread pools, just add a target CPU utilization parameter to the formula.
+
+    Target CPU utilization [0..1], 1 - means thread pull will keep the processors fully utilized).
+    The formula becomes:
+    Ideal thread Count = Number of Available Cores * Target CPU utilization * [ 1 + (Wait time / Service time)]
 
