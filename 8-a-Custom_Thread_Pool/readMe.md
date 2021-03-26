@@ -7,6 +7,8 @@
    
 # 1 - Need 
    
+    utilize the maximum CPU and increase the performance of java program
+    
     /** Thread Pool constructor */
     public ThreadPoolExecutor(
                   int corePoolSize,
@@ -33,7 +35,7 @@
 
 # 2 - Thread Pool Size Considerations 
 
-   **(a) CPU Bound Tasks**
+## (2-I) CPU Bound Tasks
 
      Tasks which involves mathematical calculations.
      
@@ -45,16 +47,20 @@
      
      
      
-   **(b) IO Bound Tasks**
+## (2-II) IO Bound Tasks
 
-     - Database Calls
-       For example if a worker thread depends on a database, 
-       the thread pool is limited by the database's connection pool size. 
-       Does it make any sense to have 1000 running threads in front of a database connection pool with 100 connections?
-     
-     - Service Calls
-       If a worker thread calls an external service which can handle only a few requests simultaneously, 
-       the thread pool is limited by the throughput of this service as well
+**(a)Database Calls**
+
+       PROBLEM : 
+       > A thread is blocked until DB response is returned.
+       > The thread pool is limited by the database's connection pool size.
+         Does it make any sense to have 1000 running threads in front of a database connection pool with 100 connections?
+               
+**(b)Service Calls**
+
+       > A thread is blocked until DB response is returned.
+       > The thread pool is limited by the throughput of this service as well.
+       
      
      
 # 3 - 
