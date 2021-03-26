@@ -37,7 +37,7 @@
 
 # 2 - Thread Pool Size Considerations 
 
-## (I) CPU Bound Tasks
+## CPU Bound Tasks
 
      Tasks which involves mathematical calculations.
      
@@ -47,7 +47,7 @@
      While a cloud or server may have as many as cores in CPU.
           
 
-## (II) IO Bound Tasks
+## IO Bound Tasks
 
 **(a)Database Calls**
 
