@@ -38,24 +38,15 @@
     iii) Queuing a very long task – to avoid blocking a thread for too long, 
          you can specify a maximum wait time after which the task is rejected or re-added to the queue
 
+
+#  3 -  [Thraed Pool Size](https://github.com/abhiSyncd/Java-Threads-Step-By-Step/tree/master/8-a-Custom_Thread_Pool) :
+
          To mitigate these risks, you have to choose the thread pool type and parameters carefully, 
          according to the tasks that they will handle.
  
-         Choosing Pool-Size 
-  
-         i)CPU Instensive  : Such as complex-Computing tasks (Iterating and transforming Large List)
-                           : Ideal Pool size cshould be "No. of CPU Core count"
+    
 
-
-         ii)IO Intensive   : Such as HTTP-calls , DB-calls or any Network calls  
-                           : Ideal Pool size should be "Large".
-                             Because if one Thread takes time to return Response,
-                             Application can use Remaining Threads in the pool
-  
-  
-  
-
-#  3 - Java Implementation of Thread Pools :     
+#  4 - Java Implementation of Thread Pools :     
 
     
    **I) The Executors class and Executor interface**  
@@ -83,7 +74,7 @@
 
 
 
-#  4 - Types of Thread Pool in Executors class : 
+#  5 - Types of Thread Pool in Executors class : 
 
  
 **I) newSingleThreadExecutor()**
@@ -136,7 +127,7 @@
     
  
 
-#  5 - Types of Methods in ExecutorService to execute Threads  : 
+#  6 - Types of Methods in ExecutorService to execute Threads  : 
  
 **I) Methods** 
    
