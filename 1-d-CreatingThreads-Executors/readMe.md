@@ -39,7 +39,7 @@
          you can specify a maximum wait time after which the task is rejected or re-added to the queue
 
 
-#  3 -  [Thraed Pool Size](https://github.com/abhiSyncd/Java-Threads-Step-By-Step/tree/master/8-a-Custom_Thread_Pool) :
+#  3 -  [Thread Pool Size](https://github.com/abhiSyncd/Java-Threads-Step-By-Step/tree/master/8-a-Custom_Thread_Pool) :
 
          To mitigate these risks, you have to choose the thread pool type and parameters carefully, 
          according to the tasks that they will handle.
