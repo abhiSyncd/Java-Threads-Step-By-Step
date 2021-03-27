@@ -35,29 +35,29 @@
 	     
 **4 - [Executor-Framework](https://github.com/abhiSyncd/Java-Threads-Step-By-Step/tree/master/1-d-CreatingThreads-Executors)**
 
-      i) Need of Executor|Thread Pool
+    1) Need of Executor|Thread Pool
       
-     ii) Potential Risks of Using a Thread Pool : 
+    2) Potential Risks of Using a Thread Pool : 
      
-    iii) Ideal Thread Pool Size :
+    3) Ideal Thread Pool Size :
      
-     iv) Java Implementation of Thread Pools
+    5) Java Implementation of Thread Pools
            - The Executors class and Executor interface
            - Fork-Join Pool 
 		   
-     v) Types of Thread Pool in Executors class
-           - newSingleThreadExecutor()
-           - newFixedThreadPool(int poolsize)
-           - newCachedThreadPool()
-           - newScheduledThreadPool(int poolsize)
+    6) Types of Thread Pool in Executors class
+       - newSingleThreadExecutor()
+       - newFixedThreadPool(int poolsize)
+       - newCachedThreadPool()
+       - newScheduledThreadPool(int poolsize)
     		   
-     vi) Types of Methods in ExecutorService to execute Threads : 
-           - execute(Runnable)         : Multiple runnables can be submitted to MULTIPLE execute() methods 
-           - submit(Runnable)          : Multiple runnables can be submitted to MULTIPLE submit() methods
-           - submit(Callable)          : Multiple callables can be submitted to MULTIPLE submit() methods
-           - invokeAll(List<Callable>) : List<callables> can be submitted to ONE invokeAll() method
-                                         Returns a List<Future> holding their status and results when ALL Tasks completes
-           - invokeAny(List<Callable>) : List<callables> can be submitted to ONE invokeAny() method
+    7) Types of Methods in ExecutorService to execute Threads : 
+       - execute(Runnable)         : Multiple runnables can be submitted to MULTIPLE execute() methods 
+       - submit(Runnable)          : Multiple runnables can be submitted to MULTIPLE submit() methods
+       - submit(Callable)          : Multiple callables can be submitted to MULTIPLE submit() methods
+       - invokeAll(List<Callable>) : List<callables> can be submitted to ONE invokeAll() method
+                                     Returns a List<Future> holding their status and results when ALL Tasks completes
+       - invokeAny(List<Callable>) : List<callables> can be submitted to ONE invokeAny() method
 
 
 ###################################################################################
