@@ -1,6 +1,6 @@
-################################################################################################
-##  1 - Need of Executor Framework | Thread Pool
-################################################################################################
+
+#  1 - Need of Executor Framework | Thread Pool
+
 
     Every time a task is executed a Thread is created 
     Creating and starting a thread can be an expensive process
@@ -20,9 +20,9 @@
 
 
 
-################################################################################################
-##  2 -  Potential Risks of Using a Thread Pool :
-################################################################################################
+
+#  2 -  Potential Risks of Using a Thread Pool :
+
 
     Although thread pools provide significant advantages, you can also encounter several problems while using one, 
     such as:
@@ -54,9 +54,9 @@
   
   
   
-################################################################################################
-##  3 - Java Implementation of Thread Pools :     
-################################################################################################
+
+#  3 - Java Implementation of Thread Pools :     
+
     
    **I) The Executors class and Executor interface**  
    
@@ -82,9 +82,9 @@
     
 
 
-################################################################################################
-##  4 - Types of Thread Pool in Executors class : 
-################################################################################################
+
+#  4 - Types of Thread Pool in Executors class : 
+
  
 **I) newSingleThreadExecutor()**
  
@@ -135,9 +135,8 @@
        executor.scheduleAtFixedRate(runnable, 2 ,2, TimeUnit.SECONDS); :
     
  
- ################################################################################################
-##  5 - Types of Methods in ExecutorService to execute Threads  : 
-################################################################################################
+
+#  5 - Types of Methods in ExecutorService to execute Threads  : 
  
 **I) Methods** 
    
