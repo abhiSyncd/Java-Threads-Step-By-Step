@@ -4,18 +4,22 @@
     To utilize the maximum CPU and increase the performance of java program
     
     - Thread Pool Executor constructor 
-      > int corePoolSize,
-      > int maximumPoolSize,
-      > long keepAliveTime,
-      > TimeUnit unit,
+      > int corePoolSize     
+      > int maximumPoolSize 
+      > long keepAliveTime 
+      > TimeUnit unit 
       > BlockingQueue workQueue
       > RejectedExecutionHandler handler
 
-    Here,
+
+    Here 
+    CorePoolSize = This will create 10 threads at the time of initialization
+
     BlockingQueue works on following rules:
     > Running Threads < CorePoolSize      : Executor creates a new thread
     > Running Threads = CorePoolSize      : Executor adds request in the queue rather than adding a new thread.
-    > Running Threads > MaximumPoolSize   : Requests cannot be Queued, Executor throws Exception and request is rejected
+                                            If queue is full it will create 11th thread and will go till MaximumPoolSize                                  
+    > Running Threads > MaximumPoolSize   : Requests cannot be Queued, Executor throws TaskRejected Exception.
 
    
     In the case of high load, at best we will get a thread "starvation" situation, at worst OutOfMemoryError.
