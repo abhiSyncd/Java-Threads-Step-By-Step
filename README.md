@@ -205,15 +205,19 @@
 ## Section 8 - Implementation Examples | Use Cases MultiThreading
 ###################################################################################
 
-**1 - [LRU Cache](https://github.com/abhiLinkd/Java-Threads-Step-By-Step/tree/master/7-a-LRUCache-usingHashMap%26DoubleLinkedList)**
+**1 - [LRU Cache](https://github.com/abhiSyncd/Java-Threads-Step-By-Step/tree/master/8-b-LRUCache-usingHashMap%26DoubleLinkedList)**
 
 **2 - Rate Limiting**
 
-**3 - [Custom Thread Poo](https://github.com/abhiSyncd/Java-Threads-Step-By-Step/tree/master/7-b-LRUCache-usingHashMap%26DoubleLinkedList)**
+**3 - Custom Thread Pool**
     
     - https://way2java.com/multithreading/realtime-examples-of-multithreading/
     - Gathering information from different web services running in parallel : CompletableFuture, which uses Fork-Join Pool by Default
 
-Others : Daemon Threads 
-The JVM exits when all the running threads are daemon threads. So imagine you're writing a simple game where your main method loops until you decide to quit. And imagine that at the start of the game, you start a thread that will endlessly poll some website to trigger alerts. You would like the JVM to exit when you decide to end the game. You don't want the endless polling to prevent the game from ending. So you make this polling thread a daemon thread.
+
+# 
+    Others : Daemon Threads 
+    The JVM exits when all the running threads are daemon threads. So imagine you're writing a simple game where your main method loops until you decide to quit. 
+    And imagine   that at the start of the game, you start a thread that will endlessly poll some website to trigger alerts. You would like the JVM to exit when you decide to
+    end the game. You don't want the endless polling to prevent the game from ending. So you make this polling thread a daemon thread.
 
