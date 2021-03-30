@@ -1,6 +1,8 @@
   
 # 1 - JVM divides memory into stack and heap memory   
      
+       Both STACK & HEAP are stored in the computer's RAM .
+       
   ## (a) Stack Area
    
       a) Whenever a new method is invoked by a Thread 
