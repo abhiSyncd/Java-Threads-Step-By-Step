@@ -1,10 +1,5 @@
   
-  
-  # What happen when  we create multiple object of a  Class?
-  
-  
-  
-  # 1 - JVM divides memory into stack and heap memory   
+# 1 - JVM divides memory into stack and heap memory   
      
   ## i) Stack Area
    
