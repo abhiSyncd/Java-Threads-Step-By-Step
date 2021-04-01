@@ -6,13 +6,17 @@
       It means any modification on immutable object will result in another immutable object 
       Ex) String, String Buffer, Primitive Wrapper Classes 
 
+
 ## 2 - Advantage
     - Thread safe : can be shared without synchronization in concurrent environment
       Since String is immutable in Java, it's inherently thread-safe.
 
+
 ## 3 - Use case
-    - Good choice for HashMap-Key 
+    - Good choice for HashMap-Key
+      Why HashMap key should be immutable in java?
       [Fore More Info] : https://www.thetechnojournals.com/2019/10/why-hashmap-key-should-be-immutable-in.html
+ 
  
 ## 4 - How to make a class Immutable : https://docs.oracle.com/javase/tutorial/essential/concurrency/imstrat.html
      I)Steps to create an Immutable Class
@@ -23,6 +27,7 @@
        - 1 Full-Arg-constructor
        - Getter Methods
        - No Setter Methods, so that field value cannot be changed after object creation.
+
 
 ##
     II) Immutable Class with Mutable Reference
