@@ -171,7 +171,8 @@
       1 - What is an Immutable Class
       2 - Advantage
       3 - Use case 
-      4 - How to make a class Immutable
+      4 - Why Strings are Immutable in Java
+      5 - How to make a class Immutable
            - Steps 
            - Immutable Class with Mutable Reference
 
