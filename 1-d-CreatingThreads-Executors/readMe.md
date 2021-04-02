@@ -23,26 +23,25 @@
 
 #  2 -  Potential Risks of Using a Thread Pool :
 
-
     Although thread pools provide significant advantages, you can also encounter several problems while using one, 
     such as:
 
-     i) Using a thread pool that is too large or too small – if the thread pool contains too many threads, 
+    (a) Using a thread pool that is too large or too small – if the thread pool contains too many threads, 
         this can significantly affect the performance of the application; 
         On the other hand, a thread pool that is too small may not bring the performance gain that you would expect
 
-     ii) Deadlock can happen just like in any other multi-threading situation; for example, 
-         a task may be waiting for another task to complete, with no available threads for this latter one to execute; 
-         That’s why it’s usually a good idea to avoid dependencies between tasks
+    (b) Deadlock can happen just like in any other multi-threading situation; for example, 
+        a task may be waiting for another task to complete, with no available threads for this latter one to execute; 
+        That’s why it’s usually a good idea to avoid dependencies between tasks
 
-    iii) Queuing a very long task – to avoid blocking a thread for too long, 
-         you can specify a maximum wait time after which the task is rejected or re-added to the queue
+    (c) Queuing a very long task – to avoid blocking a thread for too long, 
+        you can specify a maximum wait time after which the task is rejected or re-added to the queue
 
 
 #  3 -  [Thread Pool Size](https://github.com/abhiSyncd/Java-Threads-Step-By-Step/tree/master/8-a-Custom_Thread_Pool) :
 
-         To mitigate above mentioned risks, you have to choose the thread pool type and parameters carefully, 
-         according to the tasks that they will handle.
+     To mitigate above mentioned risks, you have to choose the thread pool type and parameters carefully, 
+     according to the tasks that they will handle.
  
     
 
