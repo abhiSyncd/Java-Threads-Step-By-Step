@@ -17,6 +17,7 @@
     These IDLE threads in the pool can be reused to execute pending tasks
 
     This mechanism is especially helpful in systems that execute a large number of small tasks.
+    You can throttle client request instead of having clients throttle your api
 
 
 
