@@ -43,6 +43,12 @@
 
      To mitigate above mentioned risks, you have to choose the thread pool type and parameters carefully, 
      according to the tasks that they will handle.
+     
+     A properly sized thread pool should allow as many requests to run as the hardware and application can comfortably support. 
+     In other words, 
+     we don’t want requests waiting in a queue if we have the capacity to process them but 
+     we also don’t want to launch more requests than we have the capacity to manage
+     
  
     
 
