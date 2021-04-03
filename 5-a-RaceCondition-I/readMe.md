@@ -201,33 +201,33 @@
           - Then T2,T3 will go in WAIT State and will be put into a QUEUE(FIFO).
           - T1 completes and release the lock using lock.unlock() and gets into TERMINATED state 
           - Then at the same time a new thread T4 comes in and tries to aquire a lock.
-            ReentrantLock Instead of putting it in a queue allows T5 to aquire a Lock, instead of T2,T3 is in a wait state
+            ReentrantLock Instead of putting it in a queue allows T4 to aquire a Lock, instead of T2,T3 is in a wait state
 
               
          But if we write : ReentrantLock lock = new ReentrantLock(true) , Then Lock becomes a Fair Lock.
-         Suppose Threads t1,t2,t3 comes at same time and 
-         - Thread t1 first aquires the lock using  lock.lock() and Becomes RUNNABLE ,
-         - Then Threads t2,t3 will got in WAIT State and will be put into a QUEUE(FIFO).
-         - Thread t1 completes and release the lock using lock.unlock() and gets into TERMINATED state 
+         Suppose Threads T1,T2,T3  comes at same time and 
+         - Thread T1 first aquires the lock using  lock.lock() and Becomes RUNNABLE ,
+         - Then Threads T2,T3 will got in WAIT State and will be put into a QUEUE(FIFO).
+         - Thread T1 completes and release the lock using lock.unlock() and gets into TERMINATED state 
          - Then the longest waiting thread will ge given a chance to aquire a lock.
               
-         This avoids "Starvation" and thus increases performances
+         This avoids "STARVATION" and thus increases performances
              
              
        c) Timed | Polled Lock Acquisition
        
            What happens if the lock owner doesn’t release it? 
-           The lock will be held forever and we could be in a deadlock. To prevent this issue, we will set an expiration time on the lock, so the lock will be auto-released.
+           The lock will be held forever and we could be in a DEADLOCK. To prevent this issue, we will set an expiration time on the lock, so the lock will be auto-released.
     
          - synchronized keyword, a thread can be blocked waiting for a lock, for an indefinite period of time and there was no way to control that.
            In Intrinsic-Lock (using synchronizeeyword ) Lock-Timeout is not possible
              
-           Thread-1 acquires a lock on shared-object and if doesn’t unlock the data
-           Thread-2-request-thread on WAIT state to acquire the same lock, either
+           Thread T1 acquires a lock on shared-object and if doesn’t unlock the data
+           Thread T2-request-thread on WAIT state to acquire the same lock, either
             - Till specified Time and returns with an Exception thrown : Timed lock-acquisition
             - Poll it at specific time                                 : Polled lock-acquisition
 
-            - This avoids "Deadlock" using ReetrantLock.tryLock(1, TimeUnit.SECONDS) in :  acquire lock and automatically unlock it after 10 seconds
+            - This avoids "Deadlock" using ReetrantLock.tryLock(10, TimeUnit.SECONDS) in :  acquire lock and automatically unlock it after 10 seconds
               https://github.com/abhiSyncd/Java-Threads-Step-By-Step/blob/master/5-b-Deadlock/src/main/e__Solution_2_UsingReetrantLock_TryLock_with_Timeout.java
          
          
@@ -242,8 +242,7 @@
 
               https://www.baeldung.com/java-concurrent-locks
               https://gist.github.com/vikasverma787/9acfb081c4f4364b8100557635cc6178
-
-      Read more: https://javarevisited.blogspot.com/2013/03/reentrantlock-example-in-java-synchronized-difference-vs-lock.html#ixzz6UAKfxgmo
+              https://javarevisited.blogspot.com/2013/03/reentrantlock-example-in-java-synchronized-difference-vs-lock.html#ixzz6UAKfxgmo
 
 
 
@@ -257,7 +256,7 @@
 
 
 ################################################################################################
-## Section 4 - ReetrantLock 
+## Section 4 - ReetrantLock : Lock API 
 ################################################################################################
 
 
@@ -291,3 +290,30 @@
     a)ReetrantLock
     b)ReetrantReadWriteLock
     c)Stamped Lock(Java 8) :  https://www.educative.io/courses/java-8-lambdas-stream-api-beyond/JYBojJkLlPo
+    
+    
+################################################################################################
+## Section 6 - ReetrantReadWriteLock : Lock API 
+################################################################################################
+
+    a) Problem with ReetrantLock 
+       The ‘lock’ protects the critical section from concurrent access.
+       
+       Pros of ReetrantLock :
+       we use one lock to block threads from entering the critical section. 
+       So it blocks all other thread from reading when any one of them is writing. This behavior is fine.
+       
+       Cons of ReetrantLock :
+       But it also blocks all other thread from reading when any one of them is reading.
+       This will cause the application to slow down as read operation can be shared mostly.
+       
+       
+    b) Solution : ReetrantReadWriteLock
+       Allow multiple threads to read when no other thread is performing a write operation. 
+       There is No Need to block threads when all are in read mode.
+       However, When one of the threads is writing, block all other threads from reading and writing
+       
+       Source : 
+       https://medium.com/analytics-vidhya/advanced-locking-in-java-reentrant-read-write-lock-b40fce0833de
+       https://java2blog.com/java-reentrantreadwritelock-example/
+       
