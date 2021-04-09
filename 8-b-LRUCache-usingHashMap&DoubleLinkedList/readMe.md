@@ -1,6 +1,6 @@
-
- https://github.com/awangdev/LintCode/blob/master/Java/146.%20LRU%20Cache.java
- https://labuladong.gitbook.io/algo-en/iv.-high-frequency-interview-problem/lru_algorithm
+         https://afteracademy.com/blog/lru-cache-implementation
+	 https://github.com/awangdev/LintCode/blob/master/Java/146.%20LRU%20Cache.java
+	 https://labuladong.gitbook.io/algo-en/iv.-high-frequency-interview-problem/lru_algorithm
 
  Cache : HashMap<Key, Node>  : HashMap<Integer, DoublyLinkedListNode>
  
