@@ -209,8 +209,6 @@
 **1 - [LRU Cache](https://github.com/abhiSyncd/Java-Threads-Step-By-Step/tree/master/8-b-LRUCache-usingHashMap%26DoubleLinkedList)**
 
 **2 - Rate Limiting**
-
-**3 - Custom Thread Pool**
     
     - https://way2java.com/multithreading/realtime-examples-of-multithreading/
     - Gathering information from different web services running in parallel : CompletableFuture, which uses Fork-Join Pool by Default
