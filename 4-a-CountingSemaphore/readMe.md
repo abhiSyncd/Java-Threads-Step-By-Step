@@ -1,8 +1,11 @@
-Semaphores – RATE LIMITER : limit how many background Threads (Jobs) are allowed to run concurrently
+    
+    https://subscription.packtpub.com/book/application_development/9781788627900/3/ch03lvl1sec20/counting-semaphores
+    
+    Semaphores – RATE LIMITER : limit how many background Threads (Jobs) are allowed to run concurrently
 
-Semaphores – Restrict the number of threads that can access a resource. Example, limit max 10 connections to access a file simultaneously.
+    Semaphores – Restrict the number of threads that can access a resource. Example, limit max 10 connections to access a file simultaneously.
 
-Mutex – Only one thread to access a resource at once. Example, when a client is accessing a file, no one else should have access the same file at the same time.
+    Mutex – Only one thread to access a resource at once. Example, when a client is accessing a file, no one else should have access the same file at the same time.
 
 ------------------------------
 
