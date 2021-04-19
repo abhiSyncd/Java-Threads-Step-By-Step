@@ -1,6 +1,10 @@
+      
+         why use double linked list in lru cache
+         https://labuladong.gitbook.io/algo-en/iv.-high-frequency-interview-problem/lru_algorithm
+	 
          https://afteracademy.com/blog/lru-cache-implementation
 	 https://github.com/awangdev/LintCode/blob/master/Java/146.%20LRU%20Cache.java
-	 https://labuladong.gitbook.io/algo-en/iv.-high-frequency-interview-problem/lru_algorithm
+	 
 	 
 	 easiest way is to use LinkedHashMap : https://leetcode.com/problems/lru-cache/discuss/45939/Laziest-implementation:-Java%27s-LinkedHashMap-takes-care-of-everything
 
