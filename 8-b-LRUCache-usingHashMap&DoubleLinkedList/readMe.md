@@ -30,7 +30,7 @@
 		 map.put(key, node);
 	     } else {
 		 if (cap == cache.size()) {
-		     Node last = cache.removeLast(); // Delete the last node in the linked list
+		     Node last = cache.removeLast();
 		     map.remove(last.key);
 		 }
 
