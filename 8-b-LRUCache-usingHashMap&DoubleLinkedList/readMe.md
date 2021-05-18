@@ -10,45 +10,36 @@
         > get(key) 
 
     (b) Double Linked List : O(1) Contanst Time
-        > Add Node at the head, time complexity O(1)
-          public void addFirst(Node x);
-	  
-	> Delete Node in the linked list (x is guaranteed to exist)
-          Given a node in a doubly linked list, time complexity O(1)
-          public void remove(Node x);
-	  
-	> Delete and return the last node in the linked list, time complexity O(1)
-          public Node removeLast();
-	  
-	> Return the length of the linked list, time complexity O(1)
-          public int size();
+        > Add Node at the head,	    
+	> Delete and return the last node
+	> Delete an existing|given Node  	  	  
+	//> Return the length of the linked list
 
 
 # 2 - Operations 
 
-## 2-I) ADD : HashMap<Integer, DoublyLinkedListNode> 
+## 2-I) INSERT 
  
     public void put(int key, int val) {
         
-        Node x = new Node(key, val);         // Initialize new node x
+        Node node = new Node(key, val);       
 
         if (map.containsKey(key)) {
-            
-            cache.remove(map.get(key));      // Delete the old node, add to the head
-            cache.addFirst(x);               // Update the corresponding record in map
-            map.put(key, x);
+            cache.remove(map.get(key));         
+            cache.addFirst(node);  
+            map.put(key, node);
         } else {
             if (cap == cache.size()) {
                 Node last = cache.removeLast(); // Delete the last node in the linked list
                 map.remove(last.key);
             }
            
-            cache.addFirst(x);                // Add to the head
-            map.put(key, x);
+            cache.addFirst(node);
+            map.put(key, node);
         }
     }
 
-## 2-II) GET : HashMap<Integer, DoublyLinkedListNode>	
+## 2-II) SELECT 
  
 	  int get(int key) {
 	    if (key does not exist) {                // Cache Miss
