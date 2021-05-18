@@ -18,35 +18,34 @@
 
 # 2 - Operations 
 
-## 2-I) INSERT 
- 
-    public void put(int key, int val) {
-        
-        Node node = new Node(key, val);       
+## 2-I) INSERT
 
-        if (map.containsKey(key)) {
-            cache.remove(map.get(key));         
-            cache.addFirst(node);  
-            map.put(key, node);
-        } else {
-            if (cap == cache.size()) {
-                Node last = cache.removeLast(); // Delete the last node in the linked list
-                map.remove(last.key);
-            }
-           
-            cache.addFirst(node);
-            map.put(key, node);
-        }
-    }
+	 public void put(int key, int val) {
 
-## 2-II) SELECT 
- 
-	  int get(int key) {
-	    if (key does not exist) {                // Cache Miss
+	     Node node = new Node(key, val);
+
+	     if (map.containsKey(key)) {
+		 cache.remove(map.get(key));
+		 cache.addFirst(node);
+		 map.put(key, node);
+	     } else {
+		 if (cap == cache.size()) {
+		     Node last = cache.removeLast(); // Delete the last node in the linked list
+		     map.remove(last.key);
+		 }
+
+		 cache.addFirst(node);
+		 map.put(key, node);
+	     }
+ }
+
+## 2-II) SELECT
+
+	int get(int key) {
+	    if (key does not exist) { // Cache Miss
 		return -1;
-	    } 
-	    else if(Key Exist) {                     // Cache Hit 
-		bring (key, val) to the head;
+	    } else if (Key Exist) { // Cache Hit 
+		bring(key, val) to the head;
 		return val;
 	    }
 	}
