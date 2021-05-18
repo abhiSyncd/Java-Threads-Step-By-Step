@@ -58,5 +58,6 @@ Sources
     https://afteracademy.com/blog/lru-cache-implementation
     https://github.com/awangdev/LintCode/blob/master/Java/146.%20LRU%20Cache.java
 
-    Easiest way is to use LinkedHashMap : https://leetcode.com/problems/lru-cache/discuss/45939/Laziest-implementation:-Java%27s-LinkedHashMap-takes-care-of-everything
+    Note : Easiest way is to use LinkedHashMap
+    https://leetcode.com/problems/lru-cache/discuss/45939/Laziest-implementation:-Java%27s-LinkedHashMap-takes-care-of-everything
 
