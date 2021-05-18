@@ -41,17 +41,19 @@
 ## 2-II) SELECT
 
 	int get(int key) {
-	    if (key does not exist) { // Cache Miss
-		return -1;
-	    } else if (Key Exist) { // Cache Hit 
-		bring(key, val) to the head;
-		return val;
-	    }
+	    if (map.containsKey(key)) { // Cache Hit 
+		Node node = map.get(key)
+		int result = node.value
+		deleteNode(node)
+		addNodeToHead(node)
+		return result
+	    } else
+		return -1; // Cache Miss
 	}
-	
-
 #
-    Sources : 
+
+Sources 
+
     https://labuladong.gitbook.io/algo-en/iv.-high-frequency-interview-problem/lru_algorithm 
     https://afteracademy.com/blog/lru-cache-implementation
     https://github.com/awangdev/LintCode/blob/master/Java/146.%20LRU%20Cache.java
