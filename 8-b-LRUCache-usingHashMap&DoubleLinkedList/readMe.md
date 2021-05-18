@@ -1,6 +1,7 @@
 	 
-# 1 - Data Structures Consideration |  HashMap<Integer, DoublyLinkedListNode>
+# 1 - Data Structures Consideration
 
+        HashMap<Integer, DoublyLinkedListNode>
         The HashMap will hold the key and the reference to the Node of the Doubly Linked List.
         where
 
