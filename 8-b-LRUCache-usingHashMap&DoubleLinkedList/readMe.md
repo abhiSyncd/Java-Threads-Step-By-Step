@@ -1,27 +1,27 @@
 	 
 # 1 - Data Structures Consideration
 
-        HashMap<Integer, DoublyLinkedListNode>
-        The HashMap will hold the key and the reference to the Node of the Doubly Linked List.
-        where
+    HashMap<Integer, DoublyLinkedListNode>
+    The HashMap will hold the key and the reference to the Node of the Doubly Linked List.
+    where
 
-	(a) HashMap :  O(1) Contanst Time
-	    > put(key, value) 
-	    > get(key) 
+    (a) HashMap :  O(1) Contanst Time
+        > put(key, value) 
+        > get(key) 
 
-	(b) Double Linked List : O(1) Contanst Time
-	    > Add Node at the head, time complexity O(1)
-              public void addFirst(Node x);
-
-            > Delete Node in the linked list (x is guaranteed to exist)
-              Given a node in a doubly linked list, time complexity O(1)
-              public void remove(Node x);
-
-            > Delete and return the last node in the linked list, time complexity O(1)
-              public Node removeLast();
-
-            > Return the length of the linked list, time complexity O(1)
-              public int size();
+    (b) Double Linked List : O(1) Contanst Time
+        > Add Node at the head, time complexity O(1)
+          public void addFirst(Node x);
+	  
+	> Delete Node in the linked list (x is guaranteed to exist)
+          Given a node in a doubly linked list, time complexity O(1)
+          public void remove(Node x);
+	  
+	> Delete and return the last node in the linked list, time complexity O(1)
+          public Node removeLast();
+	  
+	> Return the length of the linked list, time complexity O(1)
+          public int size();
 
 
 # 2 - Operations 
