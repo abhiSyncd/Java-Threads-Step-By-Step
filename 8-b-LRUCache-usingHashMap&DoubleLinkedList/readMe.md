@@ -10,9 +10,9 @@
 	     > get(key) 
 
 	 (b) Double Linked List : O(1) Contanst Time
-	     > Add Node at the head
-	     > Delete and return the last node
-	     > Delete an existing|given Node 
+	     > Add Node at the head             : cache.addNodeToHead(node);
+	     > Delete and return the last node  : cache.deleteNodeAtEnd()
+	     > Delete an existing|given Node    : cache.deleteNode(map.get(key));
 
 
 # 2 - Operations 
@@ -24,12 +24,12 @@
 	     Node node = new Node(key, val);
 
 	     if (map.containsKey(key)) {
-		 cache.remove(map.get(key));
-		 cache.addFirst(node);
+		 cache.deleteNode(map.get(key));
+		 cache.addNodeToHead(node);
 		 map.put(key, node);
 	     } else {
 		 if (cap == cache.size()) {
-		     Node last = cache.removeLast();
+		     Node last = cache.deleteNodeAtEnd();
 		     map.remove(last.key);
 		 }
 
@@ -44,8 +44,8 @@
 	    if (map.containsKey(key)) { // Cache Hit 
 		Node node = map.get(key)
 		int result = node.value
-		deleteNode(node)
-		addNodeToHead(node)
+		cache.deleteNode(node)
+		cache.addNodeToHead(node)
 		return result
 	    } else
 		return -1; // Cache Miss
