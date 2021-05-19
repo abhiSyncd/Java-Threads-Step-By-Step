@@ -15,7 +15,7 @@
 	     > Delete an existing|given Node    : cache.deleteNode(map.get(key));
 
 
-# 2 - [Operations](https://github.com/abhiSyncd/Images-Repository/blob/master/LRU_Cache.png) 
+# 2 - [Operations](https://github.com/abhiSyncd/Images-Repository/blob/master/Implementation_a_LRU_Cache.png) 
 
 ## 2-I) INSERT
 
