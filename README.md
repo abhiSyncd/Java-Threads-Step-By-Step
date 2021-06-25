@@ -202,6 +202,7 @@
       2 - Garbage Collection 
       3 - Types of Garbage Collectors
  
+<!--- 
 ###################################################################################
 ## Section 8 - Implementation Examples | Use Cases MultiThreading
 ###################################################################################
@@ -213,6 +214,7 @@
     - https://way2java.com/multithreading/realtime-examples-of-multithreading/
     - Gathering information from different web services running in parallel : CompletableFuture, which uses Fork-Join Pool by Default
 
+---> 
 
 # 
     Others : Daemon Threads 
