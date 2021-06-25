@@ -316,4 +316,32 @@
        Source : 
        https://medium.com/analytics-vidhya/advanced-locking-in-java-reentrant-read-write-lock-b40fce0833de
        https://java2blog.com/java-reentrantreadwritelock-example/
+     
+     
+    c) Implementation 
+    
+        static ReadWriteLock rwl = new ReentrantReadWriteLock();
        
+        public static void readFromFile(List < Person > people) {
+            rwl.readLock().lock();
+            try {
+                ...
+                //method body is not changed
+            } finally {
+                rwl.readLock().unlock();
+            }
+
+        }
+    
+        public static void writeToFile(List < Person > people) {
+            rwl.writeLock().lock();
+            try {
+                ...
+                //method body is not changed
+            } finally {
+                rwl.writeLock().unlock();
+            }
+        }    
+    
+    
+    
