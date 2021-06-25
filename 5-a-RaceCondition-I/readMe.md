@@ -320,7 +320,7 @@
      
     c) Implementation 
     
-        static ReadWriteLock rwl = new ReentrantReadWriteLock();
+        static final ReadWriteLock rwl = new ReentrantReadWriteLock();
        
         public static void readFromFile(List < Person > people) {
             rwl.readLock().lock();
