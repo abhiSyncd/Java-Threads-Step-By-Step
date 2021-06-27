@@ -252,15 +252,22 @@
             ReentrantLock provides a method called lockInterruptibly(), which can be used to interrupt thread when it is waiting for lock.
          
         
-
-
+  
+################################################################################################
+## Section 4 - Types of Extrinsic Lock : Lock API 
+################################################################################################
+  
+    a)ReetrantLock
+    b)ReetrantReadWriteLock
+    c)Stamped Lock(Java 8) :  https://www.educative.io/courses/java-8-lambdas-stream-api-beyond/JYBojJkLlPo
+    
 
 ################################################################################################
-## Section 4 - ReetrantLock : Lock API 
+## Section 4-I - ReetrantLock : Lock API 
 ################################################################################################
 
 
- **1 - What is Reetrant Lock**
+ **1 - What is Reetrant Lock | using lock()**
      
      - ReentrantLock is an exclusive lock, which allows only one thread to access at the same time. 
      
@@ -281,17 +288,21 @@
              So we must always Release the lock in finally block, so that other waiting threads can continue its processing
 
      
-  
-  
-################################################################################################
-## Section 5 - Types of Extrinsic Lock : Lock API 
-################################################################################################
-  
-    a)ReetrantLock
-    b)ReetrantReadWriteLock
-    c)Stamped Lock(Java 8) :  https://www.educative.io/courses/java-8-lambdas-stream-api-beyond/JYBojJkLlPo
+  **2 - What is Reetrant Lock | using tryLock(10, TimeUnit.SECONDS)**
+ 
+    ReentrantLock lock = new ReentrantLock();
     
-    
+    try {
+        lock.tryLock(5, TimeUnit.SECONDS);
+        // Write operation on resource shared by multiple threads : Thread safe Code to execute	
+    } catch (IOException | InterruptedException ex) {
+        System.out.println("Exception Caught :" + ex.getMessage());
+    } finally {
+        lock.unlock();
+    } 
+  
+  
+  
 ################################################################################################
 ## Section 6 - ReetrantReadWriteLock : Lock API 
 ################################################################################################
