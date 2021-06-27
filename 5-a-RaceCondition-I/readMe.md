@@ -307,7 +307,8 @@
 ## Section 6 - Lock API : ReetrantReadWriteLock 
 ################################################################################################
 
-    a) Problem with ReetrantLock 
+**a) Problem with ReetrantLock**
+
        The ‘lock’ protects the critical section from concurrent access.
        
        Pros of ReetrantLock :
@@ -319,7 +320,8 @@
        This will cause the application to slow down as read operation can be shared mostly.
        
        
-    b) Solution : ReetrantReadWriteLock
+**b) Solution : ReetrantReadWriteLock**
+
        Allow multiple threads to read when no other thread is performing a write operation. 
        There is No Need to block threads when all are in read mode.
        However, When one of the threads is writing, block all other threads from reading and writing
@@ -329,7 +331,7 @@
        https://java2blog.com/java-reentrantreadwritelock-example/
      
      
-    c) Implementation 
+**c) Implementation** 
     
         static final ReadWriteLock rwl = new ReentrantReadWriteLock();
        
