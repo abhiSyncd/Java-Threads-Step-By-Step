@@ -324,6 +324,11 @@
        There is No Need to block threads when all are in read mode.
        However, When one of the threads is writing, block all other threads from reading and writing
        
+
+       A read-write lock is a lock that 
+       allows multiple threads to read from the same resource simultaneously, BUT 
+       only one thread to write to it
+       
        Source : 
        https://medium.com/analytics-vidhya/advanced-locking-in-java-reentrant-read-write-lock-b40fce0833de
        https://java2blog.com/java-reentrantreadwritelock-example/
