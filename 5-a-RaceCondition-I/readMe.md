@@ -16,6 +16,7 @@
 
    **b) Race Condition Scenario**
 
+         ----------------------------------------------------------------------------------------------------------
          
          public static void main(String[] args) throws InterruptedException {
 
@@ -31,7 +32,8 @@
 
         }
       
-#       
+       ----------------------------------------------------------------------------------------------------------
+       
        public class MyRunnable implements Runnable {
 
          public int count;
@@ -60,7 +62,7 @@
 
         But, when you will run the above eaxample multiple times, you will notice that count value is varying 6,7,8.
         This is happening because "count++" is not an ATMOIC operation.
-      
+#      
      SOLUTION :
      
        Allow Only 1 Thread to access a resource at a time and blocks all threads.
