@@ -86,7 +86,7 @@
         }                                    // Release a Lock here
        }
       }
-      
+#      
       Output : 
       Main Thread : Total Number-of-Count count-variable is accessed = 10
       
@@ -116,7 +116,8 @@
       }
      }
     }
-    
+
+#
      Output : 
      Main Thread : Total Number-of-Count count-variable is accessed = 10
      
