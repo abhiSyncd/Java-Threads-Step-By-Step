@@ -1,4 +1,4 @@
-# 1 - Race Condition | Problem
+# 1 - Problem
  
  ## (a) What is Race Condition
      
@@ -69,7 +69,7 @@
        The thread which access the resource is in RUNNABLE state and all other threads will be in WAIT state.
      
        
-# 2 - Race Condition | Solution :  
+# 2 - Solution :  
    
 ## Solution 1 - Pessimistic lock : Intrinsic Locks : Using Synchronized keyword (Block)
       
