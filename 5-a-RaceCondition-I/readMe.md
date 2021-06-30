@@ -15,7 +15,9 @@
        
 
 ## (b) Race Condition Scenario
-         
+   
+   Example
+   
          public static void main(String[] args) throws InterruptedException {
 
           MyRunnable r = new MyRunnable();
@@ -47,8 +49,7 @@
        }
     
 #
-       
-      PROBLEM :
+  PROBLEM :
       
         In Above example, count is an Instance variable as is stored in HEAP-AREA.
         All Threads share the HEAP-AREA, which makes it Not-Thread-Safe.
@@ -61,7 +62,8 @@
         But, when you will run the above eaxample multiple times, you will notice that count value is varying 6,7,8.
         This is happening because "count++" is not an ATMOIC operation.
 #      
-     SOLUTION :
+    
+   SOLUTION :
      
        Allow Only 1 Thread to access a resource at a time and blocks all threads.
        The thread which access the resource is in RUNNABLE state and all other threads will be in WAIT state.
