@@ -1,6 +1,6 @@
 # 1 - Race Condition | Problem
  
-   **a) What is Race Condition**
+ ## (a) What is Race Condition
      
        It is safe when multiple threads tries to READ any resource.
        Race Condition is a problem that arises when multiple threads access and WRITE on  
@@ -14,7 +14,7 @@
        
        
 
-   **b) Race Condition Scenario**
+## (b) Race Condition Scenario
          
          public static void main(String[] args) throws InterruptedException {
 
