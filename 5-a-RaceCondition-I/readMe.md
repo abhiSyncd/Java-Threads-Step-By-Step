@@ -1,4 +1,4 @@
-# Section 1 - Race Condition 
+# 1 - Race Condition | Problem
  
    **a) What is Race Condition**
      
@@ -67,7 +67,7 @@
        The thread which access the resource is in RUNNABLE state and all other threads will be in WAIT state.
      
        
-# Section 2 - Solution :  
+# 2 - Race Condition | Solution :  
    
 **Way 1 - Pessimistic lock : Intrinsic Locks : Using Synchronized keyword (Block)**
       
@@ -147,7 +147,7 @@
         
  
  
- # Section 3 - Synchronize vs ReetrantLock
+ # 3 - Synchronize vs ReetrantLock
 
    **Intrinsic Lock** 
    
@@ -244,7 +244,7 @@
         
   
 
-# Section 4 - Lock API : Types of Extrinsic Lock
+# 4 - Lock API : Types of Extrinsic Lock
 
   
     a)ReetrantLock
@@ -253,7 +253,7 @@
     
     
 
-# Section 4-I - Lock API : ReetrantLock
+# 4-I - Lock API : ReetrantLock
 
 
 
@@ -294,7 +294,7 @@
   
   
 
-# Section 4-II - Lock API : ReetrantReadWriteLock 
+#  4-II - Lock API : ReetrantReadWriteLock 
 
 
 **a) Problem with ReetrantLock**
