@@ -152,7 +152,7 @@
  
  # 3 - Synchronize vs ReetrantLock
 
-   **Intrinsic Lock** 
+  ## (a) Intrinsic Lock
    
       Every object in Java has an intrinsic lock associated with it.
       synchronized' keyword uses intrinsic locks or monitors. 
@@ -169,7 +169,7 @@
       Even Thread.sleep() inside the synchronized method doesn't release the lock.
 
 
-   **Extrinsic Lock**
+## (b) Extrinsic Lock
       
        Extrinsic locking idioms allow more fine grained control over the operations, as against intrinsic locks
        such as FAIRNESS, lock polling, timed lock waits, and interruptible lock waits
@@ -180,11 +180,13 @@
        
    
    
-   **Synchronize vs ReetrantLock** 
+## (c) Synchronize vs ReetrantLock
    
-       a) Reetrant Locks performance is good in case we have large no. of threads accessing the shared resoource
+       1) Reetrant Locks performance is good in case we have large no. of threads accessing the shared resoource
 
-       b) FAIRNESS : 
+
+       2) FAIRNESS  | Using ReentrantLock lock = new ReentrantLock(true) 
+       
           Synchronze keyword is UNFAIR
           But Reetrant Locks can both be UNFAIR and FAIR.
           
@@ -202,12 +204,13 @@
          - Thread T1 first aquires the lock using  lock.lock() and Becomes RUNNABLE ,
          - Then Threads T2,T3 will got in WAIT State and will be put into a QUEUE(FIFO).
          - Thread T1 completes and release the lock using lock.unlock() and gets into TERMINATED state 
-         - Then the longest waiting thread will ge given a chance to aquire a lock.
+         - Then the LONGEST-WAITING-THREAD will ge given a chance to ACQUIRE A LOCK
               
          This avoids "STARVATION" and thus increases performances
+            
+            
              
-             
-       c) Timed | Polled Lock Acquisition
+       3) Timed | Polled Lock Acquisition  | USING ReetrantLock.tryLock(10, TimeUnit.SECONDS)
        
            What happens if the lock owner doesn’t release it? 
            The lock will be held forever and we could be in a DEADLOCK. To prevent this issue, we will set an expiration time on the lock, so the lock will be auto-released.
@@ -240,7 +243,7 @@
 
 
 
-       d) LOCK INTERRUPTIBILY : https://javarevisited.blogspot.com/2013/03/reentrantlock-example-in-java-synchronized-difference-vs-lock.html
+      4) LOCK INTERRUPTIBILY : https://javarevisited.blogspot.com/2013/03/reentrantlock-example-in-java-synchronized-difference-vs-lock.html
           - synchronized keyword, a thread can be blocked waiting for a lock, for an indefinite period of time and there was no way to control that.
             ReentrantLock provides a method called lockInterruptibly(), which can be used to interrupt thread when it is waiting for lock.
          
