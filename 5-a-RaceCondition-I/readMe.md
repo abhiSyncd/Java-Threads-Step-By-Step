@@ -1,8 +1,5 @@
-
-################################################################################################
 # Section 1 - Race Condition 
-################################################################################################
-  
+ 
    **a) What is Race Condition**
      
        It is safe when multiple threads tries to READ any resource.
@@ -70,12 +67,8 @@
        The thread which access the resource is in RUNNABLE state and all other threads will be in WAIT state.
      
        
-
-################################################################################################
 # Section 2 - Solution :  
-################################################################################################
-
-    
+   
 **Way 1 - Pessimistic lock : Intrinsic Locks : Using Synchronized keyword (Block)**
       
     public class MyRunnable implements Runnable {
@@ -151,13 +144,10 @@
 
         Output : 
         Main Thread : Total Number-of-Count count-variable is accessed = 10
-    
-    
-    
-
-################################################################################################
-# Section 3 - Synchronize vs ReetrantLock
-################################################################################################
+        
+ 
+ 
+ # Section 3 - Synchronize vs ReetrantLock
 
    **Intrinsic Lock** 
    
@@ -253,18 +243,18 @@
          
         
   
-################################################################################################
+
 # Section 4 - Lock API : Types of Extrinsic Lock
-################################################################################################
+
   
     a)ReetrantLock
     b)ReetrantReadWriteLock
     c)Stamped Lock(Java 8) :  https://www.educative.io/courses/java-8-lambdas-stream-api-beyond/JYBojJkLlPo
     
     
-################################################################################################
+
 # Section 4-I - Lock API : ReetrantLock
-################################################################################################
+
 
 
  **1 - What is Reetrant Lock | using lock()**
@@ -303,9 +293,9 @@
   
   
   
-################################################################################################
+
 # Section 4-II - Lock API : ReetrantReadWriteLock 
-################################################################################################
+
 
 **a) Problem with ReetrantLock**
 
