@@ -71,7 +71,7 @@
        
 # 2 - Solution :  
    
-## Solution 1 - Pessimistic lock : Intrinsic Locks : Using Synchronized keyword (Block)
+## (a) Solution 1 - Pessimistic lock : Intrinsic Locks : Using Synchronized keyword (Block)
       
     public class MyRunnable implements Runnable {
 
@@ -96,7 +96,7 @@
 
 
 
-## Solution 2 - Pessimistic lock : Extrinsic Lock  : Using ReentrantLock
+## (b) Solution 2 - Pessimistic lock : Extrinsic Lock  : Using ReentrantLock
 
     public class MyRunnable implements Runnable {
 
@@ -131,7 +131,7 @@
         
     
 
-## Solution 3 - Using Atomic Variable
+## (c) Solution 3 - Using Atomic Variable
 
         public class MyRunnable implements Runnable {
 
