@@ -212,18 +212,18 @@
              
        3) Timed | Polled Lock Acquisition  | USING ReetrantLock.tryLock(10, TimeUnit.SECONDS)
        
-           What happens if the lock owner doesn’t release it? 
-           The lock will be held forever and we could be in a DEADLOCK. To prevent this issue, we will set an expiration time on the lock, so the lock will be auto-released.
+         - What happens if the lock owner doesn’t release it? 
+            The lock will be held forever and we could be in a DEADLOCK. To prevent this issue, we will set an expiration time on the lock, so the lock will be auto-released.
     
          - synchronized keyword, a thread can be blocked waiting for a lock, for an indefinite period of time and there was no way to control that.
            In Intrinsic-Lock (using synchronizeeyword ) Lock-Timeout is not possible
              
            Thread T1 acquires a lock on shared-object and if doesn’t unlock the data
            Thread T2-request-thread on WAIT state to acquire the same lock, either
-            - Till specified Time and returns with an Exception thrown : Timed lock-acquisition
-            - Poll it at specific time                                 : Polled lock-acquisition
+            > Till specified Time and returns with an Exception thrown : Timed lock-acquisition
+            > Poll it at specific time                                 : Polled lock-acquisition
 
-            - This avoids "Deadlock" using ReetrantLock.tryLock(10, TimeUnit.SECONDS) in :  acquire lock and automatically unlock it after 10 seconds
+            > This avoids "Deadlock" using ReetrantLock.tryLock(10, TimeUnit.SECONDS) in :  acquire lock and automatically unlock it after 10 seconds
               https://github.com/abhiSyncd/Java-Threads-Step-By-Step/blob/master/5-b-Deadlock/src/main/e__Solution_2_UsingReetrantLock_TryLock_with_Timeout.java
          
          
