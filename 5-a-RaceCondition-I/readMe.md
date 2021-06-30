@@ -3,7 +3,7 @@
 ## Section 1 - Race Condition 
 ################################################################################################
   
-   **a)What is Race Condition**
+   **a) What is Race Condition**
      
        It is safe when multiple threads tries to READ any resource.
        Race Condition is a problem that arises when multiple threads access and WRITE on  
@@ -17,7 +17,7 @@
        
        
 
-   **b)Example**
+   **b) Race Condition Scenario**
 
         --------------------------------------------------------------------------------------------------------------
          
