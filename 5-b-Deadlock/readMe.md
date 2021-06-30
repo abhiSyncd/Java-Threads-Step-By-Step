@@ -2,25 +2,26 @@
 
 ## 1 - What is Deadlock : 
     
-     Race Condition is a problem that arises when multiple threads access and WRITE on  
-     the same resource (Variable | Arrays | ObjectDatabase | web-services) at the same time.
+     (a) What is Deadlock
+         Race Condition is a problem that arises when multiple threads access and WRITE on  
+         the same resource (Variable | Arrays | ObjectDatabase | web-services) at the same time.
      
-     Deadlock is a problem arises when there are Thwo Threads, both of which are holding an Object that other thread is waiting for.
-     So both the threads will simply wait, wait and wait.
+         Deadlock is a problem arises when there are Thwo Threads, both of which are holding an Object that other thread is waiting for.
+         So both the threads will simply wait, wait and wait.
      
-     Ex)
-     Person-1 (Thread-1) : wants to Transafer 200 FROM Account-1 TO Account-2
-     Person-2 (Thread-2) : wants to Transafer 100 FROM Account-2 TO Account-1
+     (b) Example
+         Person-1 (Thread-1) : wants to Transafer 200 FROM Account-1 TO Account-2
+         Person-2 (Thread-2) : wants to Transafer 100 FROM Account-2 TO Account-1
   
-     A transfer between accounts needs to lock both accounts,
+         A transfer between accounts needs to lock both accounts,
    
-     Person-1 acquires the lock on Account-1
-     Person-2 acquires the lock on Account-2
+         Person-1 acquires the lock on Account-1
+         Person-2 acquires the lock on Account-2
    
-     Now, each must acquire the lock on their “TO” account: 
-     So 
-     Person-1 is waiting for B to release the Account-2 lock, and 
-     Person-2 is waiting for A to release the Account-1 lock.
+         Now, each must acquire the lock on their “TO” account: 
+         So 
+         Person-1 is waiting for B to release the Account-2 lock, and 
+         Person-2 is waiting for A to release the Account-1 lock.
    
 
    
