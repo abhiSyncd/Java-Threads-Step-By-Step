@@ -182,10 +182,12 @@
    
 ## (c) Synchronize vs ReetrantLock
    
-       1) Reetrant Locks performance is good in case we have large no. of threads accessing the shared resoource
+   1) Performance 
+       
+          Reetrant Locks performance is good in case we have large no. of threads accessing the shared resoource
 
 
-       2) FAIRNESS  | Using ReentrantLock lock = new ReentrantLock(true) 
+   2) FAIRNESS  | Using ReentrantLock lock = new ReentrantLock(true) 
        
           Synchronze keyword is UNFAIR
           But Reetrant Locks can both be UNFAIR and FAIR.
@@ -199,27 +201,26 @@
             ReentrantLock Instead of putting it in a queue allows T4 to aquire a Lock, instead of T2,T3 is in a wait state
 
               
-         But if we write : ReentrantLock lock = new ReentrantLock(true) , Then Lock becomes a Fair Lock.
-         Suppose Threads T1,T2,T3  comes at same time and 
-         - Thread T1 first aquires the lock using  lock.lock() and Becomes RUNNABLE ,
-         - Then Threads T2,T3 will got in WAIT State and will be put into a QUEUE(FIFO).
-         - Thread T1 completes and release the lock using lock.unlock() and gets into TERMINATED state 
-         - Then the LONGEST-WAITING-THREAD will ge given a chance to ACQUIRE A LOCK
+          But if we write : ReentrantLock lock = new ReentrantLock(true) , Then Lock becomes a Fair Lock.
+          Suppose Threads T1,T2,T3  comes at same time and 
+          - Thread T1 first aquires the lock using  lock.lock() and Becomes RUNNABLE ,
+          - Then Threads T2,T3 will got in WAIT State and will be put into a QUEUE(FIFO).
+          - Thread T1 completes and release the lock using lock.unlock() and gets into TERMINATED state 
+          - Then the LONGEST-WAITING-THREAD will ge given a chance to ACQUIRE A LOCK
               
-         This avoids "STARVATION" and thus increases performances
+          This avoids "STARVATION" and thus increases performances
             
             
-             
-       3) Timed | Polled Lock Acquisition  | USING ReetrantLock.tryLock(10, TimeUnit.SECONDS)
+   3) Timed | Polled Lock Acquisition  | USING ReetrantLock.tryLock(10, TimeUnit.SECONDS)
        
-         - What happens if the lock owner doesn’t release it? 
+          - What happens if the lock owner doesn’t release it? 
             The lock will be held forever and we could be in a DEADLOCK. To prevent this issue, we will set an expiration time on the lock, so the lock will be auto-released.
     
-         - synchronized keyword, a thread can be blocked waiting for a lock, for an indefinite period of time and there was no way to control that.
-           In Intrinsic-Lock (using synchronizeeyword ) Lock-Timeout is not possible
+          - synchronized keyword, a thread can be blocked waiting for a lock, for an indefinite period of time and there was no way to control that.
+            In Intrinsic-Lock (using synchronizeeyword ) Lock-Timeout is not possible
              
-           Thread T1 acquires a lock on shared-object and if doesn’t unlock the data
-           Thread T2-request-thread on WAIT state to acquire the same lock, either
+            Thread T1 acquires a lock on shared-object and if doesn’t unlock the data
+            Thread T2-request-thread on WAIT state to acquire the same lock, either
             > Till specified Time and returns with an Exception thrown : Timed lock-acquisition
             > Poll it at specific time                                 : Polled lock-acquisition
 
@@ -243,10 +244,11 @@
 
 
 
-      4) LOCK INTERRUPTIBILY : https://javarevisited.blogspot.com/2013/03/reentrantlock-example-in-java-synchronized-difference-vs-lock.html
+  4) LOCK INTERRUPTIBILY :
+ 
           - synchronized keyword, a thread can be blocked waiting for a lock, for an indefinite period of time and there was no way to control that.
             ReentrantLock provides a method called lockInterruptibly(), which can be used to interrupt thread when it is waiting for lock.
-         
+            https://javarevisited.blogspot.com/2013/03/reentrantlock-example-in-java-synchronized-difference-vs-lock.html
         
   
 
