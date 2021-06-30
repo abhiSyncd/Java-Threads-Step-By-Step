@@ -71,7 +71,7 @@
        
 # 2 - Race Condition | Solution :  
    
-**Way 1 - Pessimistic lock : Intrinsic Locks : Using Synchronized keyword (Block)**
+## Way 1 - Pessimistic lock : **Intrinsic Locks : Using Synchronized keyword (Block)**
       
     public class MyRunnable implements Runnable {
 
