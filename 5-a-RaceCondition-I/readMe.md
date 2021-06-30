@@ -71,7 +71,7 @@
        
 # 2 - Race Condition | Solution :  
    
-## Way 1 - Pessimistic lock : **Intrinsic Locks : Using Synchronized keyword (Block)**
+## Solution 1 - Pessimistic lock : Intrinsic Locks : Using Synchronized keyword (Block)
       
     public class MyRunnable implements Runnable {
 
@@ -96,7 +96,7 @@
 
 
 
-**Way 2 - Pessimistic lock : Extrinsic Lock  : Using ReentrantLock** 
+## Solution 2 - Pessimistic lock : Extrinsic Lock  : Using ReentrantLock
 
     public class MyRunnable implements Runnable {
 
