@@ -90,9 +90,9 @@
       Output : 
       Main Thread : Total Number-of-Count count-variable is accessed = 10
       
-      Note : 
-        First acquire the lock and then increment the count variable.
-        When it’s done incrementing the variable, it can release the lock so that other threads waiting for the lock can acquire it.
+      Note :
+      First acquire the lock and then increment the count variable.
+      When it’s done incrementing the variable, it can release the lock so that other threads waiting for the lock can acquire it.
 
 
 
@@ -131,7 +131,7 @@
         
     
 
-**Way 3 - Using Atomic Variable**
+## Solution 3 - Using Atomic Variable
 
         public class MyRunnable implements Runnable {
 
