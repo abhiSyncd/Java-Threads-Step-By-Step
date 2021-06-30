@@ -48,7 +48,7 @@
          }
        }
     
-#
+
   PROBLEM :
       
         In Above example, count is an Instance variable as is stored in HEAP-AREA.
@@ -61,7 +61,7 @@
 
         But, when you will run the above eaxample multiple times, you will notice that count value is varying 6,7,8.
         This is happening because "count++" is not an ATMOIC operation.
-#      
+      
     
    SOLUTION :
      
