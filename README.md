@@ -56,12 +56,12 @@
 
 
 
-#  2 - Others Information
+#  2 - More on Threads
 
 
- **1 - Thread Priority**
+ **(a) - Thread Priority**
     
- **2 - [Create-start-pause-interrupt-and-join Threads](https://github.com/abhiSyncd/Java-Threads-Step-By-Step/tree/master/2-b-Start-Pause-Interupt-Join-Threads)**
+ **(b) - [Create-start-pause-interrupt-and-join Threads](https://github.com/abhiSyncd/Java-Threads-Step-By-Step/tree/master/2-b-Start-Pause-Interupt-Join-Threads)**
 
 
 # 3 - Multi Threading :  Problem & Solution 
