@@ -1,7 +1,7 @@
 
 # Summary : What is covered in this Tutorial   
 
- # Section 1 - Creating Threads
+ # 1 - Creating Threads
 
 **1 - [Thread Class](https://github.com/abhiSyncd/Java-Threads-Step-By-Step/tree/master/1-a-CreatingThreads-Thread)**
 
@@ -55,19 +55,19 @@
        - invokeAny(List<Callable>) : List<callables> can be submitted to ONE invokeAny() method
 
 
-###################################################################################
-## Section 2 - Others Information
-###################################################################################
+
+#  2 - Others Information
+
 
  **1 - Thread Priority**
     
  **2 - [Create-start-pause-interrupt-and-join Threads](https://github.com/abhiSyncd/Java-Threads-Step-By-Step/tree/master/2-b-Start-Pause-Interupt-Join-Threads)**
 
-###################################################################################
-## Section 3 - Multi Threading :  Problem & Solution 
-###################################################################################
 
-**1 - [Race Condition](https://github.com/abhiSyncd/Java-Threads-Step-By-Step/tree/master/5-a-RaceCondition-I)**
+# 3 - Multi Threading :  Problem & Solution 
+
+
+**(a) - [Race Condition](https://github.com/abhiSyncd/Java-Threads-Step-By-Step/tree/master/5-a-RaceCondition-I)**
 
     i)What is Race Condition 
     
@@ -83,7 +83,7 @@
        - ReadWriteLock
        - StampedLock (Java 8)
 
-**2 - [DeadLocks](https://github.com/abhiSyncd/Java-Threads-Step-By-Step/tree/master/5-b-Deadlock)**
+**(b) - [DeadLocks](https://github.com/abhiSyncd/Java-Threads-Step-By-Step/tree/master/5-b-Deadlock)**
 
      - What is DeadLock
     
@@ -91,15 +91,15 @@
     
      - Solution
     
-**3 - [Starvation](https://github.com/abhiSyncd/Java-Threads-Step-By-Step/tree/master/5-c-Starvation)**
+**(c) - [Starvation](https://github.com/abhiSyncd/Java-Threads-Step-By-Step/tree/master/5-c-Starvation)**
 
      - Problem
     
      - Solution 
 
-**4 - [Livelock](https://github.com/abhiSyncd/Java-Threads-Step-By-Step/tree/master/5-d-Livelocks)** 
+**(d) - [Livelock](https://github.com/abhiSyncd/Java-Threads-Step-By-Step/tree/master/5-d-Livelocks)** 
 
-**5 - Memory consistency errors | Visibility Problem** 
+**(e) - Memory consistency errors | Visibility Problem** 
     
     Problem : 
     Given 
@@ -119,7 +119,7 @@
       always read it from the common-shared-main-memory 
 
 
-**6 - Other** 
+**(f) - Other** 
 
     Given : 
     An object that is not thread-safe (say SimpleDateFormat)
@@ -133,16 +133,16 @@
     then each thread will not see any modification to threadLocal variable done by other thread
     
 
-###################################################################################
-## Section 4 - More on Synchronization of Threads
-###################################################################################
 
-**1 - Synchronize**
+#  4 - More on Synchronization of Threads
+
+
+**(a) - Synchronize**
 
    - [Object Level Lock](https://github.com/abhiSyncd/Java-Threads-Step-By-Step/tree/master/3-a-ObjectLevelLock)
    - [Class Level Lock](https://github.com/abhiSyncd/Java-Threads-Step-By-Step/tree/master/3-b-ClassLevelLock)
  
-**2 - Producer Consumer : Inter Thread Communication**
+**(b) - Producer Consumer : Inter Thread Communication**
 
    - [Using Wait & Notify](https://github.com/abhiSyncd/Java-Threads-Step-By-Step/tree/master/3-c-ProducerConsumer-usingWaitNotify)
    - [Using Blocking Queue](https://github.com/abhiSyncd/Java-Threads-Step-By-Step/tree/master/4-b-CountdownLatch)
@@ -151,7 +151,7 @@
      https://www.youtube.com/watch?v=N0mMm5PF5Ow
   
   
-**3 - Types of Synchronizers**
+**(c) - Types of Synchronizers**
 
    - [CountingSemaphore](https://github.com/abhiSyncd/Java-Threads-Step-By-Step/tree/master/4-a-CountingSemaphore)
    - [CountdownLatch](https://github.com/abhiLinkd/Java-Threads-Step-By-Step/tree/master/4-b-Synchornizers-CountdownLatch)
@@ -159,9 +159,9 @@
    - Exchanger
    - Phaser
 
-###################################################################################
-## Section 5 - [Immutable Class](https://github.com/abhiSyncd/Java-Threads-Step-By-Step/tree/master/6-a-ImmutableClasses-ThreadSafe)
-###################################################################################
+
+#  5 - [Immutable Class](https://github.com/abhiSyncd/Java-Threads-Step-By-Step/tree/master/6-a-ImmutableClasses-ThreadSafe)
+
 
       1 - What is an Immutable Class
       2 - Advantage
@@ -173,9 +173,9 @@
 
 
 
-###################################################################################
-## Section 5 - More on Thread Safety 
-###################################################################################
+
+# 5 - More on Thread Safety 
+
   
     - Immutable objects are by default thread-safe because their state can not be modified once created. 
       Since String is immutable in Java, it's inherently thread-safe.
@@ -189,9 +189,9 @@
 
     - Static variables if not synchronized properly become a major cause of thread-safety issues.
 
-###################################################################################
-## Section 7 - [Java Memory Model](https://github.com/abhiSyncd/Java-Threads-Step-By-Step/tree/master/7-a-Java-Memory-Model)
-###################################################################################
+
+# 7 - [Java Memory Model](https://github.com/abhiSyncd/Java-Threads-Step-By-Step/tree/master/7-a-Java-Memory-Model)
+
      
       1 - Stack vs Heap
       2 - Garbage Collection 
@@ -211,7 +211,7 @@
 
 ---> 
 
-# Section 8 : Others
+# 8 : Others
     
     Daemon Threads 
     The JVM exits when all the running threads are daemon threads. So imagine you're writing a simple game where your main method loops until you decide to quit. 
