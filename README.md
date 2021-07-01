@@ -3,19 +3,19 @@
 
  # 1 - Creating Threads
 
-**1 - [Thread Class](https://github.com/abhiSyncd/Java-Threads-Step-By-Step/tree/master/1-a-CreatingThreads-Thread)**
+**(a) - [Thread Class](https://github.com/abhiSyncd/Java-Threads-Step-By-Step/tree/master/1-a-CreatingThreads-Thread)**
 
       - Using Thread-Class as separate Class 
       - Using Thread Class as Anonymous Inner Class 
       - Using Lambda 
     
-**2 - [Runnable Interface](https://github.com/abhiSyncd/Java-Threads-Step-By-Step/tree/master/1-b-CreatingThreads-Runnable)**
+**(b) - [Runnable Interface](https://github.com/abhiSyncd/Java-Threads-Step-By-Step/tree/master/1-b-CreatingThreads-Runnable)**
 
       - Using Runnable-Interface as separate Class  
       - Using Runnable-Interface as Anonymous Inner Class 
       - Using Lambda 
 	   
-**3 - [Callable Interface](https://github.com/abhiSyncd/Java-Threads-Step-By-Step/tree/master/1-c-CreatingThreads-Callable-with-Future)**
+**(c) - [Callable Interface](https://github.com/abhiSyncd/Java-Threads-Step-By-Step/tree/master/1-c-CreatingThreads-Callable-with-Future)**
 
        i) Difference Thread vs Runnable 
 	   
@@ -28,7 +28,7 @@
 		
      
 	     
-**4 - [Executor-Framework](https://github.com/abhiSyncd/Java-Threads-Step-By-Step/tree/master/1-d-CreatingThreads-Executors)**
+**(d) - [Executor-Framework](https://github.com/abhiSyncd/Java-Threads-Step-By-Step/tree/master/1-d-CreatingThreads-Executors)**
 
     1) Need of Executor|Thread Pool
       
