@@ -1,12 +1,7 @@
 
-# Java-Threads-Step-By-Step : Overview 
+# Summary : What is covered in this Tutorial   
 
- Process vs Threads 
- 
-###################################################################################
-## Section 1 - Creating Threads 
-###################################################################################
-
+ # Section 1 - Creating Threads
 
 **1 - [Thread Class](https://github.com/abhiSyncd/Java-Threads-Step-By-Step/tree/master/1-a-CreatingThreads-Thread)**
 
