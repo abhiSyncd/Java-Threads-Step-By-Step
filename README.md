@@ -154,7 +154,7 @@
 **(c) - Types of Synchronizers**
 
    - [CountingSemaphore](https://github.com/abhiSyncd/Java-Threads-Step-By-Step/tree/master/4-a-CountingSemaphore)
-   - [CountdownLatch](https://github.com/abhiLinkd/Java-Threads-Step-By-Step/tree/master/4-b-Synchornizers-CountdownLatch)
+   - [CountdownLatch](https://github.com/abhiSyncd/Java-Threads-Step-By-Step/tree/master/4-b-CountdownLatch)
    - [CyclicBarrier](https://github.com/abhiSyncd/Java-Threads-Step-By-Step/tree/master/4-c-CyclicBarrier)
    - Exchanger
    - Phaser
