@@ -4,7 +4,7 @@
 
 # 1 - Sates 
 
-# 1 - Creating Threads
+# 2 - Creating Threads
 
 **(a) - [Thread Class](https://github.com/abhiSyncd/Java-Threads-Step-By-Step/tree/master/1-a-CreatingThreads-Thread)**
 
@@ -57,14 +57,6 @@
                                      Returns a List<Future> holding their status and results when ALL Tasks completes
        - invokeAny(List<Callable>) : List<callables> can be submitted to ONE invokeAny() method
 
-
-
-#  2 - More on Threads
-
-
- **(a) - Thread Priority**
-    
- **(b) - [Create-start-pause-interrupt-and-join Threads](https://github.com/abhiSyncd/Java-Threads-Step-By-Step/tree/master/2-b-Start-Pause-Interupt-Join-Threads)**
 
 
 # 3 - Multi Threading :  Problem & Solution 
@@ -214,10 +206,19 @@
 
 ---> 
 
-# 8 : Others
+# 8 : Residuals
     
     Daemon Threads 
     The JVM exits when all the running threads are daemon threads. So imagine you're writing a simple game where your main method loops until you decide to quit. 
     And imagine   that at the start of the game, you start a thread that will endlessly poll some website to trigger alerts. You would like the JVM to exit when you decide to
     end the game. You don't want the endless polling to prevent the game from ending. So you make this polling thread a daemon thread.
+    
+    
+    Thread Priority
+    
+    [Create-start-pause-interrupt-and-join Threads](https://github.com/abhiSyncd/Java-Threads-Step-By-Step/tree/master/2-b-Start-Pause-Interupt-Join-Threads)**
+
+
+
+
 
