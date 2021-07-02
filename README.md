@@ -2,7 +2,15 @@
 # Summary : What is covered in this Tutorial   
 
 
-# 1 - Sates 
+# 1 - Sates
+
+	NEW        : A thread not yet started
+	RUNNABLE   : A thread executing in JVM
+	RUNNING    : A Thread is Running 
+	WAITING    : A Thread waits for something to complete
+	BLOCKED    : covered in Race condition chapter 
+	TERMINATED : A thread completed its execution | Exception occured while performing task
+
 
 # 2 - Creating Threads
 
