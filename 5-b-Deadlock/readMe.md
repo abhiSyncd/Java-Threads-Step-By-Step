@@ -54,4 +54,7 @@
    
    **3-IV-Deadlock Detection**
    
-   
+
+## 4 - How to Check Which Resource is Causinhg Deadlocks
+
+       Jconsole > Thread Dumps > Check Which Resource is Causinhg Deadlocks
