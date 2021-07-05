@@ -2,7 +2,7 @@
 # Summary : What is covered in this Tutorial   
 
 
-# 1 - Sates
+# 1 - [Sates](https://github.com/abhiSyncd/Java-Threads-Step-By-Step/tree/master/2-b-Start-Pause-Interupt-Join-Threads)
 
 	NEW        : A thread not yet started
 	RUNNABLE   : A thread executing in JVM
