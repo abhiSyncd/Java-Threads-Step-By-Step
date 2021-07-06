@@ -48,8 +48,8 @@
     3) Ideal Thread Pool Size :
      
     5) Java Implementation of Thread Pools
-           - The Executors class and Executor interface
-           - Fork-Join Pool 
+       - The Executors class and Executor interface
+       - Fork-Join Pool 
 		   
     6) Types of Thread Pool in Executors class
        - newSingleThreadExecutor()
