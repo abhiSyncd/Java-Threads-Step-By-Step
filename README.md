@@ -221,10 +221,6 @@
     And imagine   that at the start of the game, you start a thread that will endlessly poll some website to trigger alerts. You would like the JVM to exit when you decide to
     end the game. You don't want the endless polling to prevent the game from ending. So you make this polling thread a daemon thread.
     
-    
-    Thread Priority
-    
-    [Create-start-pause-interrupt-and-join Threads](https://github.com/abhiSyncd/Java-Threads-Step-By-Step/tree/master/2-b-Start-Pause-Interupt-Join-Threads)**
 
 
 
