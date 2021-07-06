@@ -84,10 +84,10 @@
   
 	Interrupting a thread can be used to stop or resume the execution of that thread from another thread.
 	But we can ask a thread to stop politely using Thread class interrupt() mehod.
-	Refer Links : 
-        https://www.codejava.net/java-core/concurrency/how-to-use-threads-in-java-create-start-pause-interrupt-and-join
+	Refer Links :
+	https://www.codejava.net/java-core/concurrency/how-to-use-threads-in-java-create-start-pause-interrupt-and-join
 	https://codepumpkin.com/interrupt-interrupted-isinterrupted-java-multithreading/
-        https://www.youtube.com/watch?v=-7ZB-jpaPPo
+	https://www.youtube.com/watch?v=-7ZB-jpaPPo
 	   
 	   
         ExecutorService executor = Executors.newSingleThreadExecutor();
