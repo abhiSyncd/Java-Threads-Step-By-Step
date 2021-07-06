@@ -85,23 +85,23 @@
 	Interrupting a thread can be used to stop or resume the execution of that thread from another thread.
 	But we can ask a thread to stop politely using Thread class interrupt() mehod.
 	Refer Links : 
-	   https://www.codejava.net/java-core/concurrency/how-to-use-threads-in-java-create-start-pause-interrupt-and-join
-	   https://codepumpkin.com/interrupt-interrupted-isinterrupted-java-multithreading/
-           https://www.youtube.com/watch?v=-7ZB-jpaPPo
+        https://www.codejava.net/java-core/concurrency/how-to-use-threads-in-java-create-start-pause-interrupt-and-join
+	https://codepumpkin.com/interrupt-interrupted-isinterrupted-java-multithreading/
+        https://www.youtube.com/watch?v=-7ZB-jpaPPo
 	   
 	   
-	    ExecutorService executor = Executors.newSingleThreadExecutor();
-	       executor.submit(() -> {
-		 //Long running Runnable task in a separate thread other than Main thread
-	    });
+        ExecutorService executor = Executors.newSingleThreadExecutor();
+	    executor.submit(() -> {
+             //Long running Runnable task in a separate thread other than Main thread
+	});
 
-	    executor.shutdown();  
-             - No new task accepted
-	     - Previously submitted task are executed 
-
-	    executor.shutdownNow();
-	     - No new task accepted
-	     - Previously submitted task are executed 
-	     - Task being run by the thread(s) are ATTEMPTED to stop but no Guarantee that it will stop 
-	       Internally calls Thread.interrupt for all runnning threads
+	executor.shutdown();
+	- No new task accepted
+	- Previously submitted task are executed
+	
+	executor.shutdownNow();
+	- No new task accepted
+	- Previously submitted task are executed
+	- Task being run by the thread(s) are ATTEMPTED to stop but no Guarantee that it will stop
+	  Internally calls Thread.interrupt for all runnning threads
 
