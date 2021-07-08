@@ -240,5 +240,7 @@
 	    Restricts the instantiation of a class to one object.
 
 	    Please note singleton pattern will not apply lock on the object.
-	    For example 2 different threads are sharing the same single object reference and can call the different method on that single object simultaneously.
+	    For example 
+	    2 different threads are sharing the same single object reference and 
+	    can call the different method on that single object simultaneously.
 
