@@ -216,7 +216,7 @@
 
 # 8 : Residuals : More on Threads
     
-   1) Daemon Threads 
+   **1) Daemon Threads**
       
           The JVM exits when all the running threads are daemon threads. So imagine you're writing a simple game where your main method loops until you decide to quit. 
           And imagine   that at the start of the game, you start a thread that will endlessly poll some website to trigger alerts. 
@@ -224,7 +224,8 @@
 	  You don't want the endless polling to prevent the game from ending. So you make this polling thread a daemon thread.
     
 
-    - Object-level-lock vs Class-Level-Lock vs Singleton
+  **2) Object-level-lock vs Class-Level-Lock vs Singleton**
+  
       (a) Object level lock
           When we want to synchronize a non-static-method-or-codeBlock such that 
 	  Only one thread will be able to execute the code block ON GIVEN INSTANCE OF THAT CLASS.
