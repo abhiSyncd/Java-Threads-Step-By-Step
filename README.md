@@ -217,32 +217,30 @@
 # 8 : Residuals : More on Threads
     
    **1) Daemon Threads**
-      
-          The JVM exits when all the running threads are daemon threads. So imagine you're writing a simple game where your main method loops until you decide to quit. 
-          And imagine   that at the start of the game, you start a thread that will endlessly poll some website to trigger alerts. 
-	  You would like the JVM to exit when you decide to end the game. 
-	  You don't want the endless polling to prevent the game from ending. So you make this polling thread a daemon thread.
-    
+ 
+	The JVM exits when all the running threads are daemon threads. So imagine you're writing a simple game where your main method loops until you decide to quit. 
+	And imagine that at the start of the game, you start a thread that will endlessly poll some website to trigger alerts. 
+	You would like the JVM to exit when you decide to end the game. 
+	You don't want the endless polling to prevent the game from ending. So you make this polling thread a daemon thread.
 
   **2) Object-level-lock vs Class-Level-Lock vs Singleton**
   
-      (a) Object level lock
-          When we want to synchronize a non-static-method-or-codeBlock such that 
-	  Only one thread will be able to execute the code block ON GIVEN INSTANCE OF THAT CLASS.
-	  
-      (b) Class Level Lock 
-          Prevents multiple threads to enter in synchronized-block in any of ALL AVAILABLE INSTANCES OF THE CLASS on runtime.
-          This means if in runtime there are 100 instances of DemoClass, then only one thread will be able to execute demoMethod() in any one of instance at a time, and 
-	  all other instances will be locked for other threads.
+	(a) Object level lock
+	    When we want to synchronize a non-static-method-or-codeBlock such that 
+		Only one thread will be able to execute the code block ON GIVEN INSTANCE OF THAT CLASS.
 
-      (c) Singleton 
-          Restricts the instantiation of a class to one object.
-	  
-          Please note singleton pattern will not apply lock on the object. 
-	  For example 2 different threads are sharing the same single object reference and can call the different method on that single object simultaneously.
-          To avoid this, we use DOUBLE-CHECK-LOCKING.
+	(b) Class Level Lock 
+	    Prevents multiple threads to enter in synchronized-block in any of ALL AVAILABLE INSTANCES OF THE CLASS on runtime.
+	    This means if in runtime there are 100 instances of DemoClass, then only one thread will be able to execute demoMethod() in any one of instance at a time, and 
+		all other instances will be locked for other threads.
 
+	(c) Singleton 
+	    Restricts the instantiation of a class to one object.
 
+	    Please note singleton pattern will not apply lock on the object. 
+		For example 2 different threads are sharing the same single object reference and can call the different method on that single object simultaneously.
+	    To avoid this, we use DOUBLE-CHECK-LOCKING.
 
+	    For More Info on Singleton : Refer Singleton Section
 
 
