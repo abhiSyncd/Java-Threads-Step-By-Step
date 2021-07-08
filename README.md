@@ -227,13 +227,14 @@
   **2) Object-level-lock vs Class-Level-Lock vs Singleton**
   
 	(a) Object level lock
-	    When we want to synchronize a non-static-method-or-codeBlock such that 
-		Only one thread will be able to execute the code block ON GIVEN INSTANCE OF THAT CLASS.
+	    When we want to synchronize a non-static-method-or-codeBlock such that
+	    Only one thread will be able to execute the code block ON GIVEN INSTANCE OF THAT CLASS.
 
 	(b) Class Level Lock 
 	    Prevents multiple threads to enter in synchronized-block in any of ALL AVAILABLE INSTANCES OF THE CLASS on runtime.
-	    This means if in runtime there are 100 instances of DemoClass, then only one thread will be able to execute demoMethod() in any one of instance at a time, and 
-		all other instances will be locked for other threads.
+	    This means if in runtime there are 100 instances of DemoClass, 
+	    Then only one thread will be able to execute demoMethod() in any one of instance at a time, and 
+	    all other instances will be locked for other threads.
 
 	(c) Singleton 
 	    Restricts the instantiation of a class to one object.
