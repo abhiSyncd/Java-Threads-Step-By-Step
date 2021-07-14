@@ -90,7 +90,7 @@
     - Use case : 
      : As you have only one Thread to handle all your request
        You want to execute the submitted tasks in a SEQUENCE (i.e Order in which it is submitted).
-       Alternative : [Using Joins](https://github.com/abhiLinkd/Java-Threads-Step-By-Step/tree/master/2-a-MultipleThreads-SequentialExecution-UsingJoin)
+       Alternative : [Using Joins](https://github.com/abhiSyncd/Java-Threads-Step-By-Step/tree/master/2-a-MultipleThreads-SequentialExecution-UsingJoin)
    
      : ExecutorService executor = Executors.newSingleThreadExecutor();
 
