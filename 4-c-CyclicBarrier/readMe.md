@@ -1,3 +1,16 @@
+
+# 1 - What
+  
+     CyclicBarrier is a thread syncronization mechanism 
+     In which all the threads are requested to wait at a certain point, before all of them move forward. 
+     
+     The specific point is called a 'barrier' and threads enter into a wait state at barrier point until all working threads reaches at that poin
+ 
+
+
+
+# 2 - Example 
+
     Problem : 
     3 Bikers have started driving from Manali to Leh.
     All of them are driving at different speed,they have decided some checkpoints in the route.
