@@ -9,7 +9,15 @@
         > When Counter == 0 
           All Thread have completed its execution
           Now Resume to Main Thread Execution
-
+          
+       - Ex) 
+         > Operating-System before strting does 1-or-more Preprocessing steps
+         
+         > Software Before Installing on your computer, does 1-or-more Preprocessing steps such as 
+           Calculating Disk Storage 
+           Calculating System Requitements etc.
+         
+         > CAB-SERVICE : Discussed Below
 
 # 2 - Example 
 
@@ -37,10 +45,13 @@
       @Override
       public void run() {
         System.out.println(Thread.currentThread().getName() + " reached.");
-        latch.countDown();                                                //reduce count of CountDownLatch by 1    
+        latch.countDown(); 
       }
-
     }
+    
+    Here 
+    Each Invocation of " latch.countDown()" will reduce count of CountDownLatch by 1
+    When count == 0 , Main Thread Resumes
 
 #
      
