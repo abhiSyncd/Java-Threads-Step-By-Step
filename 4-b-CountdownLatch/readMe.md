@@ -25,8 +25,7 @@
      > Child Threads : Employees 
      > Main Thread   : Driver, resumes|Drives the car only when All-Child-Threads (Passengers) arrives
      
-    -------------------------------------------------------------------------------------------------
-    
+#    
       public class Passenger implements Runnable {
 
       private final CountDownLatch latch;
@@ -43,7 +42,7 @@
 
     }
 
-    -------------------------------------------------------------------------------------------------
+#
      
      public static void main(String[] args) {
 
