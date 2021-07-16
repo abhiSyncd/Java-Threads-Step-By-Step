@@ -10,7 +10,7 @@
           All Thread have completed its execution
           Now Resume to Main Thread Execution
           
-       - Ex) 
+       - Examples
          > Operating-System before strting does 1-or-more Preprocessing steps
          
          > Software Before Installing on your computer, does 1-or-more Preprocessing steps such as 
