@@ -1,14 +1,29 @@
+# 1 - When to use  
+     
+      - When a Main-Thread needs to wait for child-threads before starting its work
+      
+      - Steps Involved
+        > Initialize Counter = Number of Child-Threads
+        > Start all the Child-Threads
+        > Decrement counter : each time One Thread completes its Execution
+        > When Counter == 0 
+          All Thread have completed its execution
+          Now Resume to Main Thread Execution
 
+
+# 2 - Example 
 
      CountDownLatch : Synchronizer which allows one Thread to wait for one-or-more thread , before processing
 
      Problem : 
-     3 employees shares a common cab while leaving for office.
-     Driver will drive the cab only when all 3 passengers take their seats in the car 
+     3 Employees shares a common-cab while leaving for office.
+     Driver will drive the cab only when all 3 Employees take their seats in the car 
 
      Solution 
-     CountDownLatch must be set to 3, One for the each passengers 
-     Main Thread : Driver, resumes|Drives the car only when all Other-Threads|Passengers arrives
+     Set CountDownLatch to 3, One for the each Employee.
+     Here
+     > Child Threads : Employees 
+     > Main Thread   : Driver, resumes|Drives the car only when All-Child-Threads (Passengers) arrives
      
     -------------------------------------------------------------------------------------------------
     
