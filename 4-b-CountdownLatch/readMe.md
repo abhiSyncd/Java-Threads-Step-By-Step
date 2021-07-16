@@ -15,11 +15,11 @@
 
      CountDownLatch : Synchronizer which allows one Thread to wait for one-or-more thread , before processing
 
-     Problem : 
+     PROBLEM : 
      3 Employees shares a common-cab while leaving for office.
      Driver will drive the cab only when all 3 Employees take their seats in the car 
 
-     Solution 
+     SOLUTION : 
      Set CountDownLatch to 3, One for the each Employee.
      Here
      > Child Threads : Employees 
