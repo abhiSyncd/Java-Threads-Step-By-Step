@@ -1,23 +1,23 @@
-# 1 - When to use  
-     
-      - When a Main-Thread needs to wait for child-threads before starting its work
-      
-      - Steps Involved
-        > Initialize Counter = Number of Child-Threads
-        > Start all the Child-Threads
-        > Decrement counter : each time One Thread completes its Execution
-        > When Counter == 0 
-          All Thread have completed its execution
-          Now Resume to Main Thread Execution
-          
-       - Examples
-         > Operating-System before strting does 1-or-more Preprocessing steps
+# 1 - What and When to use
+
+    - When a Main-Thread needs to wait for child-threads before starting its work
+    
+    - Steps Involved
+      > Initialize Counter = Number of Child-Threads
+      > Start all the Child-Threads
+      > Decrement counter : each time One Thread completes its Execution
+      > When Counter == 0
+        All Thread have completed its execution
+        Now Resume to Main Thread Execution
+        
+     - Examples
+       > Operating-System before strting does 1-or-more Preprocessing steps
+       
+       > Software Before Installing on your computer, does 1-or-more Preprocessing steps such as 
+         Calculating Disk Storage 
+         Calculating System Requitements etc
          
-         > Software Before Installing on your computer, does 1-or-more Preprocessing steps such as 
-           Calculating Disk Storage 
-           Calculating System Requitements etc.
-         
-         > CAB-SERVICE : Discussed Below
+       > CAB-SERVICE : Discussed Below
 
 # 2 - Example 
 
